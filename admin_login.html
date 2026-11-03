@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід в адмін-панель — Тенісний клуб Racquet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= ШАПКА САЙТУ (HEADER) ================= -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="#booking">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <ul class="lang-switcher">
+                    <li class="lang-item active">
+                        <span lang="uk" aria-current="true">UA</span>
+                    </li>
+                    <li class="lang-item">
+                        <a href="/en/" lang="en">EN</a>
+                    </li>
+                </ul>
+                <div class="header-socials">
+                    <a href="#" aria-label="YouTube"><img src="images/youtube_icon.png" alt="YouTube"></a>
+                    <a href="#" aria-label="VK"><img src="images/vk_icon.png" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= ОСНОВНИЙ КОНТЕНТ ================= -->
+    <main>
+        <section class="hero-section admin-hero">
+            <div class="container">
+                <h1>Панель управління</h1>
+            </div>
+        </section>
+
+        <section class="admin-login-section">
+            <div class="container">
+                <!-- Прихований заголовок для проходження W3C валідації -->
+                <h2 class="visually-hidden">Форма входу для адміністратора</h2>
+
+                <div class="info-card-beige admin-login-card" style="max-width: 450px; margin: 0 auto;">
+                    <h3>Авторизація</h3>
+                    
+                    <form action="/admin/login" method="POST" class="admin-form">
+                        <p>
+                            <label for="admin-login">Логін або Email</label><br>
+                            <input type="text" id="admin-login" name="login" placeholder="admin@racquet.com" required>
+                        </p>
+
+                        <p>
+                            <label for="admin-password">Пароль</label><br>
+                            <input type="password" id="admin-password" name="password" placeholder="••••••••" required>
+                        </p>
+
+                        <p style="margin-top: 20px;">
+                            <button type="submit" class="btn-primary-purple" style="width: 100%;">
+                                Увійти
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= ПІДВАЛ (FOOTER) ================= -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="#booking">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="YouTube"><img src="images/youtube_icon_footer.png" alt="YouTube"></a>
+                <a href="#" aria-label="VK"><img src="images/vk_icon_footer.png" alt="VK"></a>
+                <a href="#" aria-label="Telegram"><img src="images/telegram_icon_footer.png" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини — Тенісний клуб Racquet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="news.html" class="active">Новини</a></li>
+                    <li><a href="#booking">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <ul class="lang-switcher">
+                    <li class="lang-item active">
+                        <span lang="uk" aria-current="true">UA</span>
+                    </li>
+                    <li class="lang-item">
+                        <a href="/en/" lang="en">EN</a>
+                    </li>
+                </ul>
+                <div class="header-socials">
+                    <a href="#" aria-label="YouTube"><img src="images/youtube_icon.png" alt="YouTube"></a>
+                    <a href="#" aria-label="VK"><img src="images/vk_icon.png" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <main>
+        <section class="hero-section news-hero">
+            <div class="container">
+                <h1>Новини</h1>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                
+                <!-- Прихований заголовок для виправлення ієрархії h1 -> h2 -> h3 та валідації W3C -->
+                <h2 class="visually-hidden">Стрічка новин</h2>
+
+                <div class="news-grid">
+
+                    <!-- Новина 1 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news1.jpg" alt="Любительський турнір з тенісу">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-07-22" class="news-date">22 липня 2025 року</time>
+                            <h3>Любительський турнір з тенісу</h3>
+                            <p class="news-excerpt">
+                                Запрошуємо гравців будь-якого рівня взяти участь у любительському турнірі з тенісу. На переможців чекають кубки, цінні призи та клубні абонементи.
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-1">Детальніше</button>
+                        </div>
+                    </article>
+
+                    <!-- Новина 2 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news2.jpg" alt="Оновлення хард-покриття">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-04-04" class="news-date">4 квітня 2025 року</time>
+                            <h3>Оновлення хард-покриття</h3>
+                            <p class="news-excerpt">
+                                Ми завершили планові роботи з оновлення хард-покриття на 2-му та 3-му кортах. Тепер гра стала ще комфортнішою та безпечнішою.
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-2">Детальніше</button>
+                        </div>
+                    </article>
+
+                    <!-- Новина 3 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news3.jpg" alt="Дитячий теніс набір">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-10-15" class="news-date">15 жовтня 2025 року</time>
+                            <h3>Набір у дитячі секції</h3>
+                            <p class="news-excerpt">
+                                Відкрито набір у дитячі секції для вікових груп 5–8 та 9–12 років. Перше пробне тренування — безкоштовне!
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-3">Детальніше</button>
+                        </div>
+                    </article>
+
+                    <!-- Новина 4 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news4.jpg" alt="Майстер-клас тренера">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-08-12" class="news-date">12 серпня 2025 року</time>
+                            <h3>Майстер-клас від старшого тренера</h3>
+                            <p class="news-excerpt">
+                                Наших гостей чекає 2-годинний інтенсив від старшого тренера клубу. Розберемо ключові комбінації, подачу та позиціонування на корті.
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-4">Детальніше</button>
+                        </div>
+                    </article>
+
+                    <!-- Новина 5 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news5.jpg" alt="Тестування ракеток">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-06-22" class="news-date">22 червня 2025 року</time>
+                            <h3>Тестування топових ракеток</h3>
+                            <p class="news-excerpt">
+                                Завітайте до нашого магазину інвентарю та випробуйте топові моделі ракеток від Head та Wilson під час тренування абсолютно безкоштовно.
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-5">Детальніше</button>
+                        </div>
+                    </article>
+
+                    <!-- Новина 6 -->
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="images/news6.jpg" alt="Нічний турнір з тенісу">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2025-12-18" class="news-date">18 грудня 2025 року</time>
+                            <h3>Нічний турнір з тенісу</h3>
+                            <p class="news-excerpt">
+                                Особливий формат для любителів нічного спорту! Запрошуємо на товариський турнір із гарною музикою, освіжаючими напоями та грою до самого світанку.
+                            </p>
+                            <button type="button" class="btn-news-more" popovertarget="news-modal-6">Детальніше</button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="#booking">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="YouTube"><img src="images/youtube_icon_footer.png" alt="YouTube"></a>
+                <a href="#" aria-label="VK"><img src="images/vk_icon_footer.png" alt="VK"></a>
+                <a href="#" aria-label="Telegram"><img src="images/telegram_icon_footer.png" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Модальне вікно новини 1 -->
+    <div id="news-modal-1" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-07-22" class="news-date">22 липня 2025 року</time>
+            <h2>Любительський турнір з тенісу</h2>
+            <p><img src="images/news1.jpg" alt="Любительський турнір з тенісу"></p>
+            <div class="news-full-body">
+                <p>Запрошуємо гравців будь-якого рівня взяти участь у любительському турнірі з тенісу. На переможців чекають кубки, цінні призи та клубні абонементи.</p>
+                <p>Турнір відбудеться на відкритих ґрунтових кортах клубу. Реєстрація відкрита до 20 липня. Забезпечуємо учасників м'ячами та питною водою.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно новини 2 -->
+    <div id="news-modal-2" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-2" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-04-04" class="news-date">4 квітня 2025 року</time>
+            <h2>Оновлення хард-покриття</h2>
+            <p><img src="images/news2.jpg" alt="Оновлення хард-покриття"></p>
+            <div class="news-full-body">
+                <p>Ми завершили планові роботи з оновлення хард-покриття на 2-му та 3-му кортах. Тепер гра стала ще комфортнішою та безпечнішою.</p>
+                <p>Було нанесено нове багатошарове акрилове покриття, що забезпечує ідеальний відскок м'яча та знижує навантаження на суглоби гравців.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно новини 3 -->
+    <div id="news-modal-3" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-3" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-10-15" class="news-date">15 жовтня 2025 року</time>
+            <h2>Набір у дитячі секції</h2>
+            <p><img src="images/news3.jpg" alt="Дитячий теніс набір"></p>
+            <div class="news-full-body">
+                <p>Відкрито набір у дитячі секції для вікових груп 5–8 та 9–12 років. Перше пробне тренування — безкоштовне!</p>
+                <p>Заняття проходять за спеціальною програмою розвитку дитячого тенісу. Малі групи до 6 дітей дозволяють приділити увагу кожній дитині.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно новини 4 -->
+    <div id="news-modal-4" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-4" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-08-12" class="news-date">12 серпня 2025 року</time>
+            <h2>Майстер-клас від старшого тренера</h2>
+            <p><img src="images/news4.jpg" alt="Майстер-клас тренера"></p>
+            <div class="news-full-body">
+                <p>Наших гостей чекає 2-годинний інтенсив від старшого тренера клубу. Розберемо ключові комбінації, подачу та позиціонування на корті.</p>
+                <p>Інтенсив підходить для гравців із середнім рівнем підготовки. Кількість місць обмежена (до 8 осіб).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно новини 5 -->
+    <div id="news-modal-5" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-5" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-06-22" class="news-date">22 червня 2025 року</time>
+            <h2>Тестування топових ракеток</h2>
+            <p><img src="images/news5.jpg" alt="Тестування ракеток"></p>
+            <div class="news-full-body">
+                <p>Завітайте до нашого магазину інвентарю та випробуйте топові моделі ракеток від Head та Wilson під час тренування абсолютно безкоштовно.</p>
+                <p>Наші консультанти допоможуть підібрати вагу, баланс та струни під ваш стиль гри.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно новини 6 -->
+    <div id="news-modal-6" popover class="modal-window news-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="news-modal-6" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+        <div class="news-modal-content">
+            <time datetime="2025-12-18" class="news-date">18 грудня 2025 року</time>
+            <h2>Нічний турнір з тенісу</h2>
+            <p><img src="images/news6.jpg" alt="Нічний турнір з тенісу"></p>
+            <div class="news-full-body">
+                <p>Особливий формат для любителів нічного спорту! Запрошуємо на товариський турнір із гарною музикою, освіжаючими напоями та грою до самого світанку.</p>
+                <p>Старт турніру о 22:00. На вас чекає атмосферний вечір, професійний діджей та подарунки для кожного учасника.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

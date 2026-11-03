@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Київський тенісний клуб "Racquet"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="about.html">Про клуб</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="#booking">Ціни</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_user_panel">
+            <ul class="lang-switcher">
+                <li class="lang-item active">
+                    <span lang="uk" aria-current="true">UA</span>
+                </li>
+                <li class="lang-item">
+                    <a href="/en/" lang="en">EN</a>
+                </li>
+            </ul>
+            <div class="social-links">
+                <a href="https://youtube.com" aria-label="YouTube">
+                    <img src="images/youtube_icon.png" alt="YouTube">
+                </a>
+                <a href="https://vk.com" aria-label="VK">
+                    <img src="images/vk_icon.png" alt="VK">
+                </a>
+            </div>
+        </div>
+          <section class="hero_section">
+            <h1>Київський тенісний клуб <br> "Racquet"</h1>
+
+            <div class="hero_cards">
+
+                <div class="hero_cards_first">
+                    <!-- Кнопка-картка відкриття модального вікна оренди корту через Popover -->
+                    <button type="button" class="hero_card hero_card_first" popovertarget="booking-modal-step1">
+                        <span class="card-tag">Послуги</span>
+                        <span class="card-title">Оренда корту</span>
+                        <span class="hero_section_card_link_image">
+                            <img src="images/ci_external-link.png" alt="">
+                        </span>
+                    </button>
+                </div>
+
+                <div class="hero_cards_second">
+                    <p>Послуги</p>
+                    <h2><a href="kids_tennis.html">Дитячий теніс</a></h2>
+                    <a href="kids_tennis.html"><img src="images/ci_external-link.png" alt=""></a>
+                </div>
+
+                <div class="hero_cards_third">
+                    <p>Послуги</p>
+                    <h2><a href="news.html">Збори команд</a></h2>
+                    <a href="news.html"><img src="images/ci_external-link.png" alt=""></a>
+                </div>
+
+            </div>
+        </section>
+
+
+    </header>
+
+
+    <main>
+
+        <section class="court_types_section">
+            <div class="сourt_types_section_first">
+                <img src="images/tennis_courts_1.png" alt="7 літніх ґрунтових кортів для тенісу">
+                <h3>7 літніх ґрунтових кортів</h3>
+            </div>
+
+            <div class="court_types_section_second">
+                <img src="images/tennis_courts_2.png" alt="Закритий зал з покриттям Штучна трава">
+                <h3>Зал з покриттям "Штучна трава"</h3>
+            </div>
+
+            <div class="court_types_section_third">
+                <img src="images/tennis_courts_3.png" alt="Закритий зал з покриттям Хард">
+                <h3>Зал з покриттям "Хард"</h3>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-media">
+                <img src="images/person_plays.png" alt="Тенісист під час гри на корті">
+            </div>
+            
+            <div class="about-content">
+                <h2>Спортивний клуб</h2>
+                <p>
+                    Ми не просто навчаємо грі, а формуємо любов і повагу до тенісу, роблячи тренування цікавими й результативними. У нашому клубі працюють досвідчені професійні тенісисти та майстри спорту, готові навчити навіть тих, хто вперше бере ракетку в руки.
+                </p>
+
+                <h3>Наші переваги:</h3>
+                <ul>
+                    <li>Різноманітність покриттів: 3 типи кортів (ґрунтові, закриті та штучна трава).</li>
+                    <li>Всесезонність: наявність критих кортів для комфортної гри у будь-яку пору року.</li>
+                    <li>Зручне онлайн-бронювання: швидкий вибір корта та часу на сайті.</li>
+                    <li>Професійні тренери: індивідуальні та групові програми.</li>
+                    <li>Гнучка система тарифів: разові відвідування та вигідні абонементи.</li>
+                    <li>Розвинена інфраструктура: прокат якісного інвентарю, роздягальні та зони відпочинку.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="trainers" class="trainers-section">
+            <h2>Тренерський склад</h2>
+
+            <div class="trainers-controls">
+                <button type="button" class="carousel-btn prev-btn" aria-label="Попередній тренер">
+                    <img src="images/arrow1_trainers.png" alt="">
+                </button>
+                <button type="button" class="carousel-btn next-btn" aria-label="Наступний тренер">
+                    <img src="images/arrow2_trainers.png" alt="">
+                </button>
+            </div>
+
+            <div class="trainers-carousel">
+                <div class="trainers-track">
+                    <article class="trainer-card">
+                        <img src="images/victoria.png" alt="Фото тренера Вікторії Онашко">
+                        <h3>Вікторія Онашко</h3>
+                        <p>Старший тренер. Досвід тренерства — 6 років.</p>
+                    </article>
+
+                    <article class="trainer-card">
+                        <img src="images/petro.png" alt="Фото тренера Петра Коваля">
+                        <h3>Петро Коваль</h3>
+                        <p>Старший тренер.</p>
+                    </article>
+
+                    <article class="trainer-card">
+                        <img src="images/victor.png" alt="Фото тренера Віктора Васюка">
+                        <h3>Віктор Васюк</h3>
+                        <p>Молодший тренер. Досвід тренерства — 1 рік.</p>
+                    </article>
+
+                    <article class="trainer-card">
+                        <img src="images/andry.png" alt="Фото тренера Андрія Малахова">
+                        <h3>Андрій Малахов</h3>
+                        <p>Старший тренер. Досвід тренерства — 7 років.</p>
+                    </article>
+
+                    <article class="trainer-card">
+                        <img src="images/iryna.png" alt="Фото організатора турнірів Ірини Коваленко">
+                        <h3>Ірина Коваленко</h3>
+                        <p>Організатор турнірів</p>
+                    </article>
+
+                    <article class="trainer-card">
+                        <img src="images/alina.png" alt="Фото тренера Аліни Вербової">
+                        <h3>Аліна Вербова</h3>
+                        <p>Тренер для дитячої групи. Досвід у тренерстві дитячих груп.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="pricing-services-section">
+            
+            <div class="pricing-block">
+                <h2>Ціни і абонементи</h2>
+
+                <div class="accordion-list">
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Ціни на послуги</span>
+                            <img src="images/arrow1_trainers.png" alt="" class="arrow-icon">
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Оренда ґрунтового корту — 500 грн/год</p>
+                            <p>Оренда корту з покриттям "Хард" — 600 грн/год</p>
+                            <p>Оренда трав'яного корту — 700 грн/год</p>
+                        </div>
+                    </details>
+
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Абонементи</span>
+                            <img src="images/arrow1_trainers.png" alt="" class="arrow-icon">
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Абонемент "Стандарт" (8 занять) — 3600 грн</p>
+                            <p>Абонемент "Безліміт" на місяць — 7000 грн</p>
+                            
+                            <!-- Кнопка виклику модального вікна абонементу -->
+                            <button type="button" class="btn-open-subscription" popovertarget="subscription-modal-step1">
+                                Оформлення абонементу
+                            </button>
+                        </div>
+                    </details>
+
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Знижки</span>
+                            <img src="images/arrow1_trainers.png" alt="" class="arrow-icon">
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Студентам та школярам — 15% у ранкові години (до 12:00).</p>
+                            <p>Знижка 10% при оренді від 3-х годин поспіль.</p>
+                        </div>
+                    </details>
+
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Контакти</span>
+                            <img src="images/arrow1_trainers.png" alt="" class="arrow-icon">
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Рецепція: +38 (067) 000-00-00</p>
+                            <p>Адреса: м. Київ, вул. Спортивна, 10</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="services-block">
+                <div class="services-header">
+                    <h2>Послуги</h2>
+                    <div class="services-controls">
+                        <button type="button" class="carousel-btn prev-btn" aria-label="Попередній слайд">
+                            <img src="images/arrow1_trainers.png" alt="">
+                        </button>
+                        <button type="button" class="carousel-btn next-btn" aria-label="Наступний слайд">
+                            <img src="images/arrow2_trainers.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="services-carousel">
+                    <div class="services-track">
+                        <button type="button" class="service-card" popovertarget="service-modal">
+                            <img src="images/comfort_cafe.png" alt="Затишний інтер'єр кафе">
+                            <span class="service-card-title">Зручне кафе</span>
+                        </button>
+
+                        <button type="button" class="service-card" popovertarget="booking-modal-step1">
+                            <img src="images/balls.jpg" alt="Тенісні корти клубу">
+                            <span class="service-card-title">Оренда кортів</span>
+                        </button>
+
+                        <button type="button" class="service-card" popovertarget="subscription-modal-step1">
+                            <img src="images/trenerstvo.jpg" alt="Персональне тренування з тенісу">
+                            <span class="service-card-title">Послуги тренера</span>
+                        </button>
+
+                        <a href="kids_tennis.html" class="service-card">
+                            <img src="images/kids_in_tennis.jpg" alt="Дитяча тенісна секція">
+                            <h3>Дитячий теніс</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ================= ПІДВАЛ (FOOTER) ================= -->
+    <footer id="contacts">
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про клуб</a></li>
+                <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                <li><a href="news.html">Новини</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-socials">
+            <a href="https://youtube.com" aria-label="YouTube">
+                <img src="images/youtube_icon_footer.png" alt="YouTube">
+            </a>
+            <a href="https://vk.com" aria-label="VK">
+                <img src="images/vk_icon_footer.png" alt="VK">
+            </a>
+            <a href="https://t.me" aria-label="Telegram">
+                <img src="images/telegram_icon_footer.png" alt="Telegram">
+            </a>
+        </div>
+
+        <p>© 2026 Київський тенісний клуб "Racquet". Всі права захищені.</p>
+    </footer>
+
+
+
+    <!-- Контактні дані та тип корту -->
+    <div id="booking-modal-step1" popover class="modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <h2>Оренда корту</h2>
+
+        <form class="booking-form">
+            <div class="form-step step-1">
+                <p>
+                    <label for="fullname">ПІБ</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ваше прізвище та ім'я" required>
+                </p>
+
+                <p>
+                    <label for="phone">Номер телефону</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+380..." required>
+                </p>
+
+                <p>
+                    <label for="email">Пошта</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </p>
+
+                <p>
+                    <label>Оберіть тип корту:</label><br>
+                    <select name="court_type" required>
+                        <option value="" disabled selected>Оберіть тип корту</option>
+                        <option value="clay">Ґрунт</option>
+                        <option value="grass">Трава</option>
+                        <option value="hard">Хард</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="need_trainer" value="yes">
+                        Потрібен тренер?
+                    </label><br>
+                    <small>*Під час уточнення броні питання буде обговорено детальніше</small>
+                </p>
+
+                <p>
+                    <button type="button" class="btn-next" popovertarget="booking-modal-step2" popovertargetaction="show">Далі</button>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Вибір дати та часу -->
+    <div id="booking-modal-step2" popover class="modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <h2>Оренда корту — Крок 2</h2>
+
+        <form class="booking-form">
+            <div class="form-step step-2">
+                <p>
+                    <label for="booking-date">Оберіть день:</label><br>
+                    <input type="date" id="booking-date" name="booking_date" value="2026-11-03" required>
+                </p>
+
+                <p>
+                    <label for="booking-time">Оберіть час:</label><br>
+                    <select id="booking-time" name="booking_time" required>
+                        <option value="" disabled selected>Оберіть час</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                    </select>
+                </p>
+
+                <p class="price-summary">
+                    Разом до сплати: <strong>500 гривень</strong><br>
+                    <small>*оплата після тренування</small>
+                </p>
+
+                <p>
+                    <button type="button" class="btn-back" popovertarget="booking-modal-step2" popovertargetaction="hide">Назад</button>
+                    <button type="button" class="btn-submit" popovertarget="booking-modal-step3" popovertargetaction="show">Підтвердити</button>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Успішне бронювання -->
+    <div id="booking-modal-step3" popover class="modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <h2>Оренда корту</h2>
+
+        <div class="form-step step-3-success">
+            <p class="success-message">Дякую! Ми вам перезвонимо для підтвердження броні!</p>
+            <p>
+                <button type="button" class="btn-success" popovertarget="booking-modal-step1" popovertargetaction="hide">Супер!</button>
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Форма заявки на абонемент -->
+    <div id="subscription-modal-step1" popover class="modal-window subscription-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="subscription-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <h2>Оформлення абонементу</h2>
+
+        <form class="subscription-form">
+            <div class="form-step step-1">
+                <p class="modal-subtitle">Залиште заявку, і ми передзвонимо для вибору картки членства</p>
+
+                <p>
+                    <label for="sub-fullname">ПІБ</label><br>
+                    <input type="text" id="sub-fullname" name="fullname" placeholder="Ваше прізвище та ім'я" required>
+                </p>
+
+                <p>
+                    <label for="sub-phone">Номер телефону</label><br>
+                    <input type="tel" id="sub-phone" name="phone" placeholder="+380..." required>
+                </p>
+
+                <p>
+                    <label for="sub-email">Пошта</label><br>
+                    <input type="email" id="sub-email" name="email" placeholder="example@mail.com" required>
+                </p>
+
+                <p>
+                    <label for="sub-type">Оберіть абонемент</label><br>
+                    <select id="sub-type" name="subscription_type" required>
+                        <option value="" disabled selected>Оберіть картку членства</option>
+                        <option value="standard">Стандарт (8 занять)</option>
+                        <option value="unlimited">Безліміт</option>
+                        <option value="kids">Дитячий абонемент</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Коли зручно вам подзвонити?</label><br>
+                    <label><input type="radio" name="call_time" value="anytime" checked> Будь-коли</label><br>
+                    <label><input type="radio" name="call_time" value="evening"> Ввечері</label><br>
+                    <label><input type="radio" name="call_time" value="morning"> Уранці</label>
+                </p>
+
+                <p>
+                    <button type="button" class="btn-submit" popovertarget="subscription-modal-step2" popovertargetaction="show">Оформити заявку</button>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Повідомлення про успішне оформлення -->
+    <div id="subscription-modal-step2" popover class="modal-window subscription-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="subscription-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <h2>Оформлення абонементу</h2>
+
+        <div class="form-step step-2-success">
+            <p class="success-message">Дякую! Ми вам передзвонимо щодо деталей абонементу!</p>
+            <p>
+                <button type="button" class="btn-success" popovertarget="subscription-modal-step1" popovertargetaction="hide">Супер!</button>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div id="service-modal" popover class="modal-window service-modal-window">
+        <button type="button" class="modal-close-btn" popovertarget="service-modal" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
+
+        <div class="service-modal-content">
+            <p><img id="service-modal-img" src="images/comfort_cafe.png" alt="Затишне кафе"></p>
+            <h2>Затишне кафе Racquet Club</h2>
+            <p>
+                На території нашого клубу працює комфортне кафе, де ви можете відпочити після інтенсивного тренування, скуштувати корисні спортивні напої, свіжу каву або перекусити.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
