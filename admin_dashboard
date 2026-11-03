@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управління — Тенісний клуб Racquet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= ШАПКА САЙТУ (HEADER) ================= -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">На сайт</a></li>
+                    <li><a href="admin_dashboard.html" class="active">Адмінка</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="admin_login.html" class="btn-primary-purple btn-logout">Вийти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= ОСНОВНИЙ КОНТЕНТ ================= -->
+    <main>
+        <section class="hero-section admin-hero">
+            <div class="container">
+                <h1>Панель управління</h1>
+            </div>
+        </section>
+
+        <section class="admin-dashboard-section">
+            <div class="container">
+                <!-- Прихований заголовок для проходження W3C валідації -->
+                <h2 class="visually-hidden">Управління замовленнями та контентом</h2>
+
+                <!-- БЛОК 1: БРОНЮВАННЯ КОРТІВ -->
+                <div class="info-card-beige admin-card">
+                    <h2>Бронювання кортів</h2>
+                    <p class="admin-card-desc">Заявки на оренду кортів від користувачів (Guest Checkout).</p>
+                    
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <caption>Список бронювань кортів</caption>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Клієнт</th>
+                                    <th>Телефон</th>
+                                    <th>Тип корту</th>
+                                    <th>Дата та час</th>
+                                    <th>Тренер</th>
+                                    <th>Статус</th>
+                                    <th>Дії</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#101</td>
+                                    <td>Олександр Іваненко</td>
+                                    <td>+380 67 123 4567</td>
+                                    <td>Хард</td>
+                                    <td>15.11.2026, 18:00</td>
+                                    <td>Так (Ігор Сергієв)</td>
+                                    <td><span class="status-badge status-pending">Очікує</span></td>
+                                    <td>
+                                        <button type="button" class="btn-primary-purple btn-sm">Підтвердити</button>
+                                        <button type="button" class="btn-danger btn-sm">Скасувати</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#102</td>
+                                    <td>Артем Кравченко</td>
+                                    <td>+380 93 456 7890</td>
+                                    <td>Ґрунт</td>
+                                    <td>16.11.2026, 10:00</td>
+                                    <td>Ні</td>
+                                    <td><span class="status-badge status-confirmed">Підтверджено</span></td>
+                                    <td>
+                                        <button type="button" class="btn-secondary btn-sm">Архів</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- БЛОК 2: ЗАЯВКИ НА ДИТЯЧИЙ ТЕНІС -->
+                <div class="info-card-beige admin-card">
+                    <h2>Заявки на дитячий теніс</h2>
+                    <p class="admin-card-desc">Записи на пробні тренування та в дитячі спортивні секції.</p>
+
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <caption>Записи дітей на тренування</caption>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>ПІБ батьків</th>
+                                    <th>Телефон</th>
+                                    <th>Email</th>
+                                    <th>Вік дитини</th>
+                                    <th>Зручний час дзвінка</th>
+                                    <th>Статус</th>
+                                    <th>Дії</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#201</td>
+                                    <td>Олена Мельник</td>
+                                    <td>+380 50 987 6543</td>
+                                    <td>elena@gmail.com</td>
+                                    <td>5–8 років</td>
+                                    <td>Увечері</td>
+                                    <td><span class="status-badge status-pending">Очікує</span></td>
+                                    <td>
+                                        <button type="button" class="btn-primary-purple btn-sm">Підтвердити</button>
+                                        <button type="button" class="btn-danger btn-sm">Скасувати</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#202</td>
+                                    <td>Василь Бойко</td>
+                                    <td>+380 68 555 1234</td>
+                                    <td>v.boyko@ukr.net</td>
+                                    <td>9–12 років</td>
+                                    <td>Будь-коли</td>
+                                    <td><span class="status-badge status-confirmed">Підтверджено</span></td>
+                                    <td>
+                                        <button type="button" class="btn-secondary btn-sm">Архів</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- БЛОК 3: ЗАЯВКИ НА АБОНЕМЕНТИ -->
+                <div class="info-card-beige admin-card">
+                    <h2>Заявки на абонементи</h2>
+                    <p class="admin-card-desc">Запити від користувачів на купівлю клубних абонементів.</p>
+
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <caption>Замовлення абонементів</caption>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Клієнт</th>
+                                    <th>Телефон</th>
+                                    <th>Email</th>
+                                    <th>Тип абонемента</th>
+                                    <th>Зручний час дзвінка</th>
+                                    <th>Статус</th>
+                                    <th>Дії</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#301</td>
+                                    <td>Дмитро Ковальов</td>
+                                    <td>+380 63 111 2233</td>
+                                    <td>d.kovalov@gmail.com</td>
+                                    <td>Безліміт (1 місяць)</td>
+                                    <td>Зранку</td>
+                                    <td><span class="status-badge status-pending">Очікує</span></td>
+                                    <td>
+                                        <button type="button" class="btn-primary-purple btn-sm">Підтвердити</button>
+                                        <button type="button" class="btn-danger btn-sm">Скасувати</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#302</td>
+                                    <td>Ірина Ткаченко</td>
+                                    <td>+380 97 777 8899</td>
+                                    <td>i.tkachenko@ukr.net</td>
+                                    <td>10 тренувань (Хард)</td>
+                                    <td>Увечері</td>
+                                    <td><span class="status-badge status-confirmed">Підтверджено</span></td>
+                                    <td>
+                                        <button type="button" class="btn-secondary btn-sm">Архів</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- БЛОК 4: ФОРМА ДОДАВАННЯ НОВИНИ -->
+                <div class="info-card-beige admin-card">
+                    <h2>Додати нову новину</h2>
+                    <p class="admin-card-desc">Заповніть форму для публікації новини або анонсу на сайті.</p>
+
+                    <form action="#" method="POST" enctype="multipart/form-data" class="admin-news-form">
+                        <p class="form-group">
+                            <label for="news-title">Заголовок новини</label>
+                            <input type="text" id="news-title" name="title" placeholder="Наприклад: Любительський турнір..." required>
+                        </p>
+
+                        <p class="form-group">
+                            <label for="news-date">Дата публікації</label>
+                            <input type="date" id="news-date" name="date" required>
+                        </p>
+
+                        <p class="form-group">
+                            <label for="news-image">Зображення новини</label>
+                            <input type="file" id="news-image" name="image" accept="image/*" required>
+                        </p>
+
+                        <p class="form-group">
+                            <label for="news-excerpt">Короткий опис (анонс)</label>
+                            <textarea id="news-excerpt" name="excerpt" rows="3" placeholder="Короткий текст для картки..." required></textarea>
+                        </p>
+
+                        <p class="form-group">
+                            <label for="news-full">Повний текст новини</label>
+                            <textarea id="news-full" name="full_text" rows="5" placeholder="Детальний опис події..." required></textarea>
+                        </p>
+
+                        <p class="form-submit">
+                            <button type="submit" class="btn-primary-purple">Опублікувати новину</button>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= ПІДВАЛ (FOOTER) ================= -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="YouTube"><img src="images/youtube_icon_footer.png" alt="YouTube"></a>
+                <a href="#" aria-label="Telegram"><img src="images/telegram_icon_footer.png" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
