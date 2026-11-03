@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- ================= ШАПКА САЙТУ (HEADER) ================= -->
     <header class="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
@@ -28,7 +27,6 @@
         </div>
     </header>
 
-    <!-- ================= ОСНОВНИЙ КОНТЕНТ ================= -->
     <main>
         <section class="hero-section admin-hero">
             <div class="container">
@@ -41,7 +39,7 @@
                 <!-- Прихований заголовок для проходження W3C валідації -->
                 <h2 class="visually-hidden">Управління замовленнями та контентом</h2>
 
-                <!-- БЛОК 1: БРОНЮВАННЯ КОРТІВ -->
+
                 <div class="info-card-beige admin-card">
                     <h2>Бронювання кортів</h2>
                     <p class="admin-card-desc">Заявки на оренду кортів від користувачів (Guest Checkout).</p>
@@ -92,7 +90,7 @@
                     </div>
                 </div>
 
-                <!-- БЛОК 2: ЗАЯВКИ НА ДИТЯЧИЙ ТЕНІС -->
+
                 <div class="info-card-beige admin-card">
                     <h2>Заявки на дитячий теніс</h2>
                     <p class="admin-card-desc">Записи на пробні тренування та в дитячі спортивні секції.</p>
@@ -143,7 +141,7 @@
                     </div>
                 </div>
 
-                <!-- БЛОК 3: ЗАЯВКИ НА АБОНЕМЕНТИ -->
+
                 <div class="info-card-beige admin-card">
                     <h2>Заявки на абонементи</h2>
                     <p class="admin-card-desc">Запити від користувачів на купівлю клубних абонементів.</p>
@@ -194,7 +192,7 @@
                     </div>
                 </div>
 
-                <!-- БЛОК 4: ФОРМА ДОДАВАННЯ НОВИНИ -->
+   
                 <div class="info-card-beige admin-card">
                     <h2>Додати нову новину</h2>
                     <p class="admin-card-desc">Заповніть форму для публікації новини або анонсу на сайті.</p>
@@ -235,7 +233,7 @@
         </section>
     </main>
 
-    <!-- ================= ПІДВАЛ (FOOTER) ================= -->
+
     <footer class="main-footer">
         <div class="container footer-container">
             <nav class="footer-nav">
