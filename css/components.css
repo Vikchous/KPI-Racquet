@@ -131,8 +131,8 @@
 
 /* Стилізація тексту всередині картки-кнопки «Оренда корту» */
 .hero_card .card-title {
-    font-family: 'Abel', sans-serif;
-    font-size: 32px; 
+    font-family: 'Abel', sans-serif !important;
+    font-size: 24px !important;
     font-weight: bold;
     display: block;
     margin-top: 5px;
