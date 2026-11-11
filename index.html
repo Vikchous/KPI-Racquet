@@ -10,82 +10,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Abhaya+Libre:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Головна</a></li>
-                <li><a href="about.html">Про клуб</a></li>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="kids_tennis.html">Дитячий теніс</a></li>
-                <li><a href="news.html">Новини</a></li>
-                <li><a href="#services">Ціни</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-        </nav>
-
-        <div class="header_user_panel">
-            <ul class="lang-switcher">
-                <li class="lang-item active">
-                    <span lang="uk" aria-current="true">UA</span>
-                </li>
-                <li class="lang-item">
-                    <a href="/en/" lang="en">EN</a>
-                </li>
-            </ul>
-            <div class="social-links">
-                <a href="https://youtube.com" aria-label="YouTube">
-                    <img src="images/youtube_icon.png" alt="YouTube">
-                </a>
-                <a href="#" aria-label="telegram"><img src="images/telegram_icon_footer" alt="Telegram"></a>
+    <div class="hero-wrapper">
+        <header class="header">
+            <div class="logo">
+                <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
             </div>
-        </div>
-          <section class="hero_section">
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="#services">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="header_user_panel">
+                <ul class="lang-switcher">
+                    <li class="lang-item active">
+                        <span lang="uk" aria-current="true">UA</span>
+                    </li>
+                    <li class="lang-item">
+                        <a href="/en/" lang="en">EN</a>
+                    </li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <img src="images/youtube_icon.png" alt="YouTube">
+                    </a>
+                    <a href="#" aria-label="Telegram">
+                        <img src="images/telegram_icon_footer.png" alt="Telegram">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero_section">
             <h1>Київський тенісний клуб <br> "Racquet"</h1>
 
-               <div class="hero_cards">
+            <div class="hero_cards">
+                <!-- Картка 1: Оренда корту -->
+                <button type="button" class="hero_card" popovertarget="booking-modal-step1">
+                    <div class="hero_card-content">
+                        <span class="card-tag">Послуги</span>
+                        <span class="card-title">Оренда корту</span>
+                    </div>
+                    <span class="hero_section_card_link_image">
+                        <img src="images/ci_external-link.png" alt="">
+                    </span>
+                </button>
 
-    <!-- Картка 1: Оренда корту -->
-    <button type="button" class="hero_card" popovertarget="booking-modal-step1">
-        <div class="hero_card-content">
-            <span class="card-tag">Послуги</span>
-            <span class="card-title">Оренда корту</span>
-        </div>
-        <span class="hero_section_card_link_image">
-            <img src="images/ci_external-link.png" alt="">
-        </span>
-    </button>
+                <!-- Картка 2: Дитячий теніс -->
+                <a href="kids_tennis.html" class="hero_card">
+                    <div class="hero_card-content">
+                        <span class="card-tag">Послуги</span>
+                        <span class="card-title">Дитячий теніс</span>
+                    </div>
+                    <span class="hero_section_card_link_image">
+                        <img src="images/ci_external-link.png" alt="">
+                    </span>
+                </a>
 
-    <!-- Картка 2: Дитячий теніс -->
-    <a href="kids_tennis.html" class="hero_card">
-        <div class="hero_card-content">
-            <span class="card-tag">Послуги</span>
-            <span class="card-title">Дитячий теніс</span>
-        </div>
-        <span class="hero_section_card_link_image">
-            <img src="images/ci_external-link.png" alt="">
-        </span>
-    </a>
-
-    <!-- Картка 3: Збори команд -->
-    <a href="news.html" class="hero_card">
-        <div class="hero_card-content">
-            <span class="card-tag">Послуги</span>
-            <span class="card-title">Збори команд</span>
-        </div>
-        <span class="hero_section_card_link_image">
-            <img src="images/ci_external-link.png" alt="">
-        </span>
-    </a>
-
-</div>
+                <!-- Картка 3: Збори команд -->
+                <a href="news.html" class="hero_card">
+                    <div class="hero_card-content">
+                        <span class="card-tag">Послуги</span>
+                        <span class="card-title">Збори команд</span>
+                    </div>
+                    <span class="hero_section_card_link_image">
+                        <img src="images/ci_external-link.png" alt="">
+                    </span>
+                </a>
+            </div>
         </section>
-
-
-    </header>
+    </div>
 
 
     <main>
