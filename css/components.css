@@ -101,24 +101,22 @@
  /* ------------------------------------------
    4. Фірмові плашки та картки послуг
    ------------------------------------------ */
-/* Контейнер карток у Hero-секції */
 .hero_cards {
     display: flex;
-    gap: 15px; /* Проміжок між картками, щоб вони не зливалися */
+    gap: 15px; /* Рівний проміжок між картками */
     justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Універсальні стилі для карток послуг (розташування елементів у рядок, як на макеті) */
-.hero_card,
-.hero_cards_first,
-.hero_cards_second,
-.hero_cards_third {
-    background-color: #8D86C9;
-    color: #FFFFFF;
-    border-radius: 0;          /* Гострі кути */
+/* Універсальні стилі для карток послуг (і для button, і для посилань a) */
+.hero_card {
+    background-color: #8D86C9 !important;
+    color: #FFFFFF !important;
+    border-radius: 0 !important;          /* Гострі кути */
     border: none !important;
-    outline: none !important;  /* Прибираємо зайве браузерне підсвічування */
-    padding: 24px 32px;        /* Внутрішні поля, щоб текст не прилипав до країв */
+    outline: none !important;  /* Прибираємо браузерне підсвічування */
+    padding: 24px 32px;        /* Внутрішні поля */
     flex: 1;
     display: flex;
     flex-direction: row;       /* Текст зліва, іконка справа */
@@ -127,50 +125,40 @@
     text-align: left;
     box-sizing: border-box;
     cursor: pointer;
-    text-decoration: none;
-    position: relative;
+    text-decoration: none !important;
 }
 
-/* Заборона браузерного фокусу/обводки для карток-кнопок */
+/* Заборона будь-якого браузерного фокусу/обводки */
 .hero_card:focus,
-.hero_card:active,
-.hero_cards_first:focus,
-.hero_cards_second:focus,
-.hero_cards_third:focus {
+.hero_card:active {
     outline: none !important;
     box-shadow: none !important;
 }
 
-.hero_card *,
-.hero_cards_second a,
-.hero_cards_third a {
-    color: #FFFFFF;
+/* Гарантуємо білий колір для всього тексту всередині */
+.hero_card * {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
 }
 
-/* Компактний блок для текстової частини всередині карток */
-.hero_card-text-wrap {
+/* Внутрішній блок для тексту (розміщує «Послуги» і назву вертикально) */
+.hero_card-content {
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Невеликий акуратний відступ між «Послуги» та назвою */
+    gap: 4px;
 }
 
 /* Стилізація мітки «Послуги» */
-.hero_card .card-tag,
-.hero_cards_first p,
-.hero_cards_second p,
-.hero_cards_third p {
+.card-tag {
     font-family: 'Abhaya Libre', serif;
     font-size: 14px;
+    opacity: 0.9;
     margin: 0;
     display: block;
-    opacity: 0.9;
 }
 
-/* Стилізація головного тексту (наприклад, «Оренда корту») */
-.hero_card .card-title,
-.hero_cards_first h2,
-.hero_cards_second h2,
-.hero_cards_third h2 {
+/* Стилізація заголовка картки («Оренда корту», «Дитячий теніс» тощо) */
+.card-title {
     font-family: 'Abel', sans-serif !important;
     font-size: 26px !important;
     font-weight: bold;
@@ -179,13 +167,8 @@
     line-height: 1.2;
 }
 
-/* Гарантований відступ і фіксований розмір для іконки стрілочки праворуч */
-.hero_section_card_link_image,
-.hero_card img,
-.hero_card svg,
-.hero_cards_first img,
-.hero_cards_second img,
-.hero_cards_third img {
+/* Фіксований розмір і відступ для іконки-стрілочки праворуч */
+.hero_section_card_link_image img {
     width: 22px;
     height: 22px;
     flex-shrink: 0;     /* Забороняє іконці стискатися */
