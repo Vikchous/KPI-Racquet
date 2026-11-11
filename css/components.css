@@ -1,45 +1,123 @@
-/* Стилізація форм та елементів інтерфейсу */
-form {
-    background-color: #F5EBDF; /* Кремово-бежевий додатковий колір з брендбуку */
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: 20px auto;
+/* ------------------------------------------
+   1. Стилі для модальних вікон (Popover)
+   ------------------------------------------ */
+.modal-window {
+    background-color: #8D86C9; /* Фірмовий лавандово-фіолетовий фон */
+    color: #FFFFFF;            /* Білий колір тексту */
+    border: none;
+    border-radius: 16px;       /* Заокруглені кути вікна */
+    padding: 35px 30px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
+/* Налаштування кольорів тексту всередині модальних вікон */
+.modal-window h2,
+.modal-window label,
+.modal-window p,
+.modal-window small,
+.modal-window .modal-subtitle,
+.modal-window .success-message {
+    color: #FFFFFF;
+}
+
+/* Кнопка закриття модального вікна (Х) */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ------------------------------------------
+   2. Поля введення (Input, Select, Textarea)
+   ------------------------------------------ */
+.modal-window input[type="text"],
+.modal-window input[type="tel"],
+.modal-window input[type="email"],
+.modal-window input[type="date"],
+.modal-window select,
+.modal-window textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #D9D9D9; /* Неактивний світло-сірий елемент з брендбуку */
-    border-radius: 4px;
+    padding: 10px 14px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-size: 15px;
     box-sizing: border-box;
 }
 
-button[type="submit"] {
-    background-color: #8D86C9; /* Фіолетово-лавандовий колір для кнопок */
-    color: #FFFFFF;
-    padding: 10px 20px;
+.modal-window input:focus,
+.modal-window select:focus,
+.modal-window textarea:focus {
+    outline: 2px solid #242038;
+}
+
+/* ------------------------------------------
+   3. Кнопки всередині модальних вікон
+   ------------------------------------------ */
+.modal-window button[type="submit"],
+.modal-window .btn-submit,
+.modal-window .btn-next,
+.modal-window .btn-success,
+.modal-window .btn-back {
+    background-color: #FFFFFF; /* Білі кнопки як на макеті */
+    color: #8D86C9;            /* Текст фіолетового кольору */
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 25px;       /* Овальна форма кнопок */
+    padding: 10px 35px;
     font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
-    opacity: 0.9;
+.modal-window button:hover {
+    background-color: #F0F0F0;
+    transform: translateY(-1px);
 }
 
-/* HTML5-валідація (стани полів) */
-input:invalid:not(:placeholder-shown) {
-    border-color: #ff6b6b; /* Червона рамка при помилці */
+/* ------------------------------------------
+   4. Фірмові плашки та картки послуг
+   ------------------------------------------ */
+/* Картки «Оренда корту», «Дитячий теніс», «Збори команд» у Hero-секції */
+.hero_card,
+.hero_cards_first,
+.hero_cards_second,
+.hero_cards_third {
+    background-color: #8D86C9;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 20px;
 }
 
-input:valid:not(:placeholder-shown) {
-    border-color: #51cf66; /* Зелена рамка при правильному введенні */
+.hero_card *,
+.hero_cards_second a,
+.hero_cards_third a {
+    color: #FFFFFF;
+}
+
+/* Елементи аккордеону («Ціни на послуги», «Абонементи» тощо) */
+.accordion-header {
+    background-color: #8D86C9;
+    color: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
