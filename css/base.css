@@ -1,1 +1,21 @@
+/* Глобальні стилі та брендбук Racquet */
+body {
+    background-color: #FFFFFF;
+    color: #222222;
+    font-family: 'Abhaya Libre', serif;
+    margin: 0;
+    padding: 0;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    color: #8D86C9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
