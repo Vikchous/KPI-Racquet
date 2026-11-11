@@ -11,39 +11,41 @@
 </head>
 <body>
     <div class="hero-wrapper">
-        <header class="header">
-            <div class="logo">
-                <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
-            </div>
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <img src="images/IMG_3755.png" alt="Логотип Racquet Club">
+                </div>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Головна</a></li>
-                    <li><a href="about.html">Про клуб</a></li>
-                    <li><a href="#services">Послуги</a></li>
-                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
-                    <li><a href="news.html">Новини</a></li>
-                    <li><a href="#services">Ціни</a></li>
-                    <li><a href="#contacts">Контакти</a></li>
-                </ul>
-            </nav>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Головна</a></li>
+                        <li><a href="about.html">Про клуб</a></li>
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                        <li><a href="news.html">Новини</a></li>
+                        <li><a href="#services">Ціни</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </nav>
 
-            <div class="header_user_panel">
-                <ul class="lang-switcher">
-                    <li class="lang-item active">
-                        <span lang="uk" aria-current="true">UA</span>
-                    </li>
-                    <li class="lang-item">
-                        <a href="/en/" lang="en">EN</a>
-                    </li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://youtube.com" aria-label="YouTube">
-                        <img src="images/youtube_icon.png" alt="YouTube">
-                    </a>
-                    <a href="#" aria-label="Telegram">
-                        <img src="images/telegram_icon_footer.png" alt="Telegram">
-                    </a>
+                <div class="header-actions">
+                    <ul class="lang-switcher">
+                        <li class="lang-item active">
+                            <span lang="uk" aria-current="true">UA</span>
+                        </li>
+                        <li class="lang-item">
+                            <a href="/en/" lang="en">EN</a>
+                        </li>
+                    </ul>
+                    <div class="header-socials">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                            <img src="images/youtube_icon.png" alt="YouTube">
+                        </a>
+                        <a href="#" aria-label="Telegram">
+                            <img src="images/telegram_icon_footer.png" alt="Telegram">
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -88,9 +90,8 @@
         </section>
     </div>
 
-
     <main>
-
+        <!-- Секція типів кортів -->
         <section class="court_types_section">
             <div class="сourt_types_section_first">
                 <img src="images/tennis_courts_1.png" alt="7 літніх ґрунтових кортів для тенісу">
@@ -108,6 +109,7 @@
             </div>
         </section>
 
+        <!-- Секція "Про клуб" -->
         <section id="about" class="about-section">
             <div class="about-media">
                 <img src="images/person_plays.png" alt="Тенісист під час гри на корті">
@@ -131,6 +133,7 @@
             </div>
         </section>
 
+        <!-- Секція "Тренери" -->
         <section id="trainers" class="trainers-section">
             <h2>Тренерський склад</h2>
 
@@ -184,6 +187,7 @@
             </div>
         </section>
 
+        <!-- Секція "Ціни та Послуги" -->
         <section id="services" class="pricing-services-section">
             
             <div class="pricing-block">
@@ -283,35 +287,34 @@
         </section>
     </main>
 
+    <footer id="contacts" class="main-footer">
+        <div class="container footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про клуб</a></li>
+                    <li><a href="kids_tennis.html">Дитячий теніс</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="#services">Ціни</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
 
-    <footer id="contacts">
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Головна</a></li>
-                <li><a href="about.html">Про клуб</a></li>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="kids_tennis.html">Дитячий теніс</a></li>
-                <li><a href="news.html">Новини</a></li>
-                <li><a href="#services">Ціни</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-        </nav>
-
-        <div class="footer-socials">
-            <a href="https://youtube.com" aria-label="YouTube">
-                <img src="images/youtube_icon_footer.png" alt="YouTube">
-            </a>
-            <a href="https://t.me" aria-label="Telegram">
-                <img src="images/telegram_icon_footer.png" alt="Telegram">
-            </a>
+            <div class="footer-socials">
+                <a href="https://youtube.com" aria-label="YouTube">
+                    <img src="images/youtube_icon_footer.png" alt="YouTube">
+                </a>
+                <a href="https://t.me" aria-label="Telegram">
+                    <img src="images/telegram_icon_footer.png" alt="Telegram">
+                </a>
+            </div>
         </div>
-
-        <p>© 2026 Київський тенісний клуб "Racquet". Всі права захищені.</p>
+        <p style="text-align: center; margin-top: 20px; color: #FFFFFF; font-size: 14px;">© 2026 Київський тенісний клуб "Racquet". Всі права захищені.</p>
     </footer>
 
-
-
-    <!-- Контактні дані та тип корту -->
+    <!-- Модальні вікна бронювання -->
+    <!-- Крок 1 -->
     <div id="booking-modal-step1" popover class="modal-window">
         <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
 
@@ -359,7 +362,7 @@
         </form>
     </div>
 
-    <!-- Вибір дати та часу -->
+    <!-- Крок 2 -->
     <div id="booking-modal-step2" popover class="modal-window">
         <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
 
@@ -398,7 +401,7 @@
         </form>
     </div>
 
-    <!-- Успішне бронювання -->
+    <!-- Крок 3 (Успіх) -->
     <div id="booking-modal-step3" popover class="modal-window">
         <button type="button" class="modal-close-btn" popovertarget="booking-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
 
@@ -411,9 +414,6 @@
             </p>
         </div>
     </div>
-
-
-
 
     <!-- Форма заявки на абонемент -->
     <div id="subscription-modal-step1" popover class="modal-window subscription-modal-window">
@@ -464,7 +464,7 @@
         </form>
     </div>
 
-    <!-- Повідомлення про успішне оформлення -->
+    <!-- Успішне оформлення абонементу -->
     <div id="subscription-modal-step2" popover class="modal-window subscription-modal-window">
         <button type="button" class="modal-close-btn" popovertarget="subscription-modal-step1" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
 
@@ -478,8 +478,7 @@
         </div>
     </div>
 
-
-
+    <!-- Модальне вікно послуги "Затишне кафе" -->
     <div id="service-modal" popover class="modal-window service-modal-window">
         <button type="button" class="modal-close-btn" popovertarget="service-modal" popovertargetaction="hide" aria-label="Закрити вікно">&times;</button>
 
