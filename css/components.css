@@ -188,6 +188,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+    width: 100%;  
     max-width: 500px;          /* Обмежуємо ширину, як на макеті */
     margin-left: auto;
     margin-right: auto;        /* Центруємо плашки */
@@ -214,5 +215,35 @@
 .hero_section_card_link_image img {
     width: 22px;
     height: 22px;
+    object-fit: contain;
+}
+
+/* ------------------------------------------
+   6. Квадратні кнопки навігації слайдера (стрілки вліво/вправо)
+   ------------------------------------------ */
+.slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrow-btn {
+    width: 45px;
+    height: 45px;
+    background-color: #8D86C9;
+    border: none;
+    outline: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.arrow-btn img,
+.arrow-btn svg {
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
