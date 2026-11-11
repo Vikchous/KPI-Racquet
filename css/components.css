@@ -62,6 +62,16 @@
     outline: 2px solid #242038;
 }
 
+/* Підсвічування коректного / некоректного заповнення полів */
+.modal-window input:valid:not(:placeholder-shown),
+.modal-window select:valid:not(:placeholder-shown) {
+    border: 2px solid #4BB543; /* Зелена рамка при правильному вводі */
+}
+
+.modal-window input:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF3333; /* Червона рамка при помилці */
+}
+
 /* ------------------------------------------
    3. Кнопки всередині модальних вікон
    ------------------------------------------ */
@@ -91,23 +101,43 @@
 /* ------------------------------------------
    4. Фірмові плашки та картки послуг
    ------------------------------------------ */
-/* Картки «Оренда корту», «Дитячий теніс», «Збори команд» у Hero-секції */
+/* Контейнер карток у Hero-секції */
 .hero_cards {
     display: flex;
     gap: 15px; /* Проміжок між картками, щоб вони не зливалися */
     justify-content: space-between;
 }
 
+/* Універсальні стилі для карток послуг (розташування елементів у рядок, як на макеті) */
 .hero_card,
 .hero_cards_first,
 .hero_cards_second,
 .hero_cards_third {
     background-color: #8D86C9;
     color: #FFFFFF;
-    border-radius: 0;
-    border: none;
-    padding: 20px;
-   flex: 1;
+    border-radius: 0;          /* Гострі кути */
+    border: none !important;
+    outline: none !important;  /* Прибираємо зайве браузерне підсвічування */
+    padding: 25px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;       /* Текст зліва, іконка справа */
+    justify-content: space-between;
+    align-items: center;       /* По вертикалі по центру */
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Заборона браузерного фокусу/обводки для карток-кнопок */
+.hero_card:focus,
+.hero_card:active,
+.hero_cards_first:focus,
+.hero_cards_second:focus,
+.hero_cards_third:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .hero_card *,
@@ -116,40 +146,72 @@
     color: #FFFFFF;
 }
 
-/* Елементи аккордеону («Ціни на послуги», «Абонементи» тощо) */
+/* Стилізація тексту всередині картки-кнопки «Оренда корту» */
+.hero_card .card-title,
+.hero_cards_second h2,
+.hero_cards_third h2 {
+    font-family: 'Abel', sans-serif !important;
+    font-size: 26px !important;
+    font-weight: bold;
+    margin: 0;
+    display: block;
+}
+
+.hero_card .card-tag,
+.hero_cards_second p,
+.hero_cards_third p {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 15px;
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+/* Компактний блок для текстової частини всередині карток */
+.hero_card-text-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------------------
+   5. Елементи акордеону («Ціни на послуги», «Абонементи» тощо)
+   ------------------------------------------ */
 .accordion-header {
     background-color: #8D86C9;
     color: #FFFFFF;
-    padding: 15px 20px;
-    border-radius: 0;
+    padding: 15px 25px;
+    border-radius: 0;          /* Гострі кути */
+    border: none !important;
+    outline: none !important;  /* Прибираємо рамку фокусу */
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    max-width: 850px;          /* Обмежуємо ширину, як на макеті */
+    margin-left: auto;
+    margin-right: auto;        /* Центруємо плашки */
+    box-sizing: border-box;
 }
 
-/* Стилізація тексту всередині картки-кнопки «Оренда корту» */
-.hero_card .card-title {
-    font-family: 'Abel', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
+/* Прибираємо підсвічування при кліку на заголовки акордеону */
+.accordion-header:focus,
+.accordion-header:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.hero_card .card-tag {
-    font-family: 'Abhaya Libre', serif;
-    font-size: 16px;
-    display: block;
+.accordion-header span,
+.accordion-header h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
 }
 
-/* Підсвічування коректного / некоректного заповнення полів */
-.modal-window input:valid:not(:placeholder-shown),
-.modal-window select:valid:not(:placeholder-shown) {
-    border: 2px solid #4BB543; /* Зелена рамка при правильному вводі */
-}
-
-.modal-window input:invalid:not(:placeholder-shown) {
-    border: 2px solid #FF3333; /* Червона рамка при помилці */
+/* Однаковий та акуратний розмір стрілочок на плашках */
+.accordion-header img,
+.accordion-header svg,
+.hero_section_card_link_image img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
