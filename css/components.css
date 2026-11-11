@@ -121,3 +121,28 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
+/* Стилізація тексту всередині картки-кнопки «Оренда корту» */
+.hero_card .card-title {
+    font-family: 'Abel', sans-serif;
+    font-size: 32px; /* підберіть розмір під ваші h2 */
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.hero_card .card-tag {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 16px;
+    display: block;
+}
+
+/* Підсвічування коректного / некоректного заповнення полів */
+.modal-window input:valid:not(:placeholder-shown),
+.modal-window select:valid:not(:placeholder-shown) {
+    border: 2px solid #4BB543; /* Зелена рамка при правильному вводі */
+}
+
+.modal-window input:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF3333; /* Червона рамка при помилці */
+}
