@@ -33,26 +33,52 @@ a:hover {
 /* ==========================================
    2. Шапка сайту (спільна для всіх сторінок)
    ================================---------- */
+/* Контейнер банера внутрішніх сторінок */
+.hero-section,
+.about-hero,
+.news-hero,
+.kids-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* Робимо відступ зверху, щоб шапка не наїжджала на текст */
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+/* Шапка сайту на внутрішніх сторінках */
 .main-header {
-    background-color: transparent !important; /* Прибираємо темний фон, робимо прозорим */
-    position: absolute;       /* Накладаємо поверх фото-банера */
+    position: absolute; /* Накладаємо поверх фото */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+    background-color: transparent !important; /* Прибираємо будь-який зайвий фон */
     padding: 20px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
+/* Контейнер усередині шапки для рівного вирівнювання */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo img {
-    height: 55px;
+    height: 75px;
+    width: auto;
     display: block;
 }
 
