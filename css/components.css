@@ -92,15 +92,22 @@
    4. Фірмові плашки та картки послуг
    ------------------------------------------ */
 /* Картки «Оренда корту», «Дитячий теніс», «Збори команд» у Hero-секції */
+.hero_cards {
+    display: flex;
+    gap: 15px; /* Проміжок між картками, щоб вони не зливалися */
+    justify-content: space-between;
+}
+
 .hero_card,
 .hero_cards_first,
 .hero_cards_second,
 .hero_cards_third {
     background-color: #8D86C9;
     color: #FFFFFF;
-    border-radius: 8px;
+    border-radius: 0;
     border: none;
     padding: 20px;
+   flex: 1;
 }
 
 .hero_card *,
@@ -114,7 +121,7 @@
     background-color: #8D86C9;
     color: #FFFFFF;
     padding: 15px 20px;
-    border-radius: 6px;
+    border-radius: 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -125,7 +132,7 @@
 /* Стилізація тексту всередині картки-кнопки «Оренда корту» */
 .hero_card .card-title {
     font-family: 'Abel', sans-serif;
-    font-size: 32px; /* підберіть розмір під ваші h2 */
+    font-size: 32px; 
     font-weight: bold;
     display: block;
     margin-top: 5px;
