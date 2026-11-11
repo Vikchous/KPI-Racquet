@@ -34,9 +34,15 @@ a:hover {
    2. Шапка сайту (спільна для всіх сторінок)
    ================================---------- */
 .main-header {
-    background-color: #242038;
+    background-color: transparent !important; /* Прибираємо темний фон, робимо прозорим */
+    position: absolute;       /* Накладаємо поверх фото-банера */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     padding: 20px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .header-container {
