@@ -1,1 +1,45 @@
+/* Стилізація форм та елементів інтерфейсу */
+form {
+    background-color: #F5EBDF; /* Кремово-бежевий додатковий колір з брендбуку */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #D9D9D9; /* Неактивний світло-сірий елемент з брендбуку */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #8D86C9; /* Фіолетово-лавандовий колір для кнопок */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* HTML5-валідація (стани полів) */
+input:invalid:not(:placeholder-shown) {
+    border-color: #ff6b6b; /* Червона рамка при помилці */
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #51cf66; /* Зелена рамка при правильному введенні */
+}
