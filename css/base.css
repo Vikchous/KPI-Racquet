@@ -19,3 +19,133 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+/* Шапка сайту (спільна для всіх сторінок) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo img {
+    height: 55px;
+    display: block;
+}
+
+.main-nav ul,
+.lang-switcher {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a,
+.lang-switcher a,
+.lang-switcher span {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-nav a:hover,
+.lang-switcher a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.header_user_panel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switcher {
+    gap: 6px;
+}
+
+.lang-switcher li:first-child::after {
+    content: "\\";
+    color: #FFFFFF;
+    margin-left: 6px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Головний банер (index.html) */
+.hero-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10% 0 10%;
+    box-sizing: border-box;
+}
+
+.hero_section {
+    margin-top: auto;
+}
+
+.hero_section h1 {
+    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 60px 0;
+}
+
+/* Банери внутрішніх сторінок */
+.page-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10% 40px 10%;
+    box-sizing: border-box;
+}
+
+.page-hero-title {
+    margin: auto 0;
+    text-align: center;
+}
+
+.page-hero-title h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Фонові зображення */
+.hero-news {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
+}
+
+.hero-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/about-bg.jpg');
+}
+
+.hero-kids {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
+}
