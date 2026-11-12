@@ -334,11 +334,17 @@ button,
     font-family: 'Abel', sans-serif !important;
 }
 
-/* 2. Основний шрифт Abhaya Libre для підписів у галереї («Зручне кафе» тощо) */
+/* 2. Інші елементи (figcaption, карусель тощо) залишаємо з Abhaya Libre за потреби */
 figcaption,
 .carousel-caption,
-.slide-caption,
-.about-media p,
-.about-media span {
+.slide-caption {
     font-family: 'Abhaya Libre', serif !important;
+}
+
+/* 3. Підписи під фото (як-от «Зручне кафе») — шрифт Abel і розмір 24px */
+.about-media h3, 
+.about-media p, 
+.image-caption {
+    font-family: 'Abel', sans-serif !important;
+    font-size: 24px !important;
 }
