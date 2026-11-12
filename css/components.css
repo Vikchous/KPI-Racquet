@@ -341,10 +341,10 @@ figcaption,
     font-family: 'Abhaya Libre', serif !important;
 }
 
-/* 3. Підписи під фото (як-от «Зручне кафе») — шрифт Abel і розмір 24px */
-.about-media h3, 
-.about-media p, 
-.image-caption {
+/* Стиль і розмір для «Зручне кафе», «Оренда кортів», «Послуги тренера» та «Дитячий теніс» */
+.service-card-title,
+.service-card h3 {
     font-family: 'Abel', sans-serif !important;
     font-size: 24px !important;
+    font-weight: normal;
 }
