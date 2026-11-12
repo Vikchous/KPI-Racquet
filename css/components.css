@@ -80,7 +80,7 @@
     background-color: #FFFFFF;
     color: #8D86C9;
     border: none;
-    border-radius: 25px;
+    border-radius: 0; /* Гострі кути */
     padding: 10px 35px;
     font-size: 16px;
     font-weight: 600;
@@ -88,6 +88,7 @@
     transition: background-color 0.2s ease, transform 0.1s ease;
     display: inline-block;
     margin-top: 10px;
+    font-family: 'Abel', sans-serif !important;
 }
 
 .modal-window button:hover {
@@ -198,6 +199,7 @@
     font-size: 20px;
     font-weight: normal;
     margin: 0;
+    font-family: 'Abel', sans-serif !important;
 }
 
 .accordion-header img,
@@ -247,12 +249,14 @@
     color: #777777;
     margin-bottom: 8px;
     display: block;
+    font-family: 'Abhaya Libre', serif;
 }
 
 .news-content h3 {
     font-size: 20px;
     margin: 0 0 12px 0;
     color: #242038;
+    font-family: 'Abel', sans-serif !important;
 }
 
 .news-excerpt {
@@ -263,29 +267,32 @@
     flex: 1;
 }
 
-.btn-news-more {
-    background-color: #8D86C9;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 24px;
-    font-size: 14px;
-    font-weight: 600;
+/* Головні фірмові кнопки (детальніше, записатись, оформлення абонементу тощо) */
+.btn-news-more,
+.btn-primary-purple {
+    background-color: #8D86C9 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0 !important; /* Гострі кути */
+    padding: 10px 28px;
+    font-size: 15px;
+    font-family: 'Abel', sans-serif !important;
     cursor: pointer;
     align-self: flex-start;
     transition: background-color 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.btn-news-more:hover {
-    background-color: #7A72B8;
+.btn-news-more:hover,
+.btn-primary-purple:hover {
+    background-color: #7A72B8 !important;
 }
 
 /* ==========================================
-   Скидання сірого підсвічування та рамок
+   7. Скидання стандартних стилів браузера
    ================================---------- */
-
-/* Прибираємо сіре тло та стандартні рамки кнопок, стрілок каруселі та табів */
-button,
+button:not(.btn-news-more):not(.btn-primary-purple),
 .carousel-arrow,
 .rules-tabs-nav button,
 .tab-link {
@@ -295,14 +302,11 @@ button,
     box-shadow: none !important;
 }
 
-/* Якщо стрілки каруселі мають фон-картинку або плашку і мають залишатися фіолетовими, 
-   але без сірої рамки браузера: */
 .carousel-arrow {
     background-color: #8D86C9 !important;
     border: none !important;
 }
 
-/* Прибираємо зайві рамки або підсвічування навколо списків і пунктів правил */
 .rules-tabs-nav li,
 .rule-dash-list li,
 .about-content ul li {
@@ -311,7 +315,6 @@ button,
     box-shadow: none !important;
 }
 
-/* Прибираємо сірі рамки навколо карток галереї чи блоків на сторінці */
 .courts-gallery-section img,
 .about-media img,
 .carousel-slide {
@@ -321,30 +324,50 @@ button,
 }
 
 /* ==========================================
-   Фіксація шрифтів для кнопок, табів та підписів
+   8. Фіксація шрифтів та інтерактивних елементів
    ================================---------- */
-
-/* 1. Шрифт Abel для всіх кнопок, табів правил та плашок */
 button, 
 .hero_card, 
 .accordion-header, 
 .btn-news-more,
+.btn-primary-purple,
 .rules-tabs-nav button, 
-.tab-link {
+.tab-link,
+.service-card-title,
+.service-card h3,
+.card-title {
     font-family: 'Abel', sans-serif !important;
 }
 
-/* 2. Інші елементи (figcaption, карусель тощо) залишаємо з Abhaya Libre за потреби */
 figcaption,
 .carousel-caption,
 .slide-caption {
     font-family: 'Abhaya Libre', serif !important;
 }
 
-/* Стиль і розмір для «Зручне кафе», «Оренда кортів», «Послуги тренера» та «Дитячий теніс» */
 .service-card-title,
 .service-card h3 {
+    font-size: 24px !important;
+    font-weight: normal;
+}
+
+/* Плашки кортів на сторінці «Про клуб» */
+.court-badge {
+    background-color: #8D86C9 !important;
+    color: #FFFFFF !important;
     font-family: 'Abel', sans-serif !important;
     font-size: 24px !important;
     font-weight: normal;
+    padding: 12px 24px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+/* Активний пункт у списку правил (фірмовий фіолетовий) */
+.rules-tabs-nav .tab-link.active,
+.rules-tabs-nav button[aria-selected="true"] {
+    color: #8D86C9 !important;
+    font-weight: bold;
 }
