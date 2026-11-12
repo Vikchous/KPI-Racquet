@@ -31,9 +31,10 @@ a:hover {
 }
 
 /* ==========================================
-   2. Шапка сайту (спільна для всіх сторінок)
+   2. Шапка сайту та внутрішні банери (Hero)
    ================================---------- */
-/* Контейнер банера внутрішніх сторінок */
+
+/* Банери внутрішніх сторінок (мають position: relative, щоб абсолютна шапка трималася всередині них) */
 .hero-section,
 .about-hero,
 .news-hero,
@@ -47,24 +48,45 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px; /* Робимо відступ зверху, щоб шапка не наїжджала на текст */
+    padding-top: 110px; /* Запас зверху, щоб шапка не перекривала текст заголовка */
     padding-bottom: 40px;
     box-sizing: border-box;
 }
 
-/* Шапка сайту на внутрішніх сторінках */
+.hero-section h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* Унікальні фонові картинки для внутрішніх сторінок */
+.news-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
+}
+
+.about-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/about-bg.jpg');
+}
+
+.kids-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
+}
+
+/* Шапка сайту (накладена поверх банера) */
 .main-header {
-    position: absolute; /* Накладаємо поверх фото */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    background-color: transparent !important; /* Прибираємо будь-який зайвий фон */
+    background-color: transparent !important;
     padding: 20px 0;
     box-sizing: border-box;
 }
 
-/* Контейнер усередині шапки для рівного вирівнювання */
+/* Контейнер усередині шапки */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -76,8 +98,9 @@ a:hover {
     box-sizing: border-box;
 }
 
+/* Збільшений логотип */
 .logo img {
-    height: 75px;
+    height: 85px; 
     width: auto;
     display: block;
 }
@@ -138,7 +161,7 @@ a:hover {
 }
 
 /* ==========================================
-   3. Головний банер та сторінки (Hero)
+   3. Головний банер головної сторінки (Index Hero)
    ================================---------- */
 .hero-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/hero-bg.jpg');
@@ -167,39 +190,6 @@ a:hover {
     font-weight: bold;
     line-height: 1.15;
     margin: 0 0 40px 0;
-}
-
-/* Банери внутрішніх сторінок */
-.hero-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
-}
-
-.hero-section h1 {
-    color: #FFFFFF;
-    font-size: 42px;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-}
-
-.news-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
-}
-
-.about-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/about-bg.jpg');
-}
-
-.kids-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
 }
 
 /* ==========================================
