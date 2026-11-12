@@ -279,3 +279,43 @@
 .btn-news-more:hover {
     background-color: #7A72B8;
 }
+
+/* ==========================================
+   Скидання сірого підсвічування та рамок
+   ================================---------- */
+
+/* Прибираємо сіре тло та стандартні рамки кнопок, стрілок каруселі та табів */
+button,
+.carousel-arrow,
+.rules-tabs-nav button,
+.tab-link {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Якщо стрілки каруселі мають фон-картинку або плашку і мають залишатися фіолетовими, 
+   але без сірої рамки браузера: */
+.carousel-arrow {
+    background-color: #8D86C9 !important;
+    border: none !important;
+}
+
+/* Прибираємо зайві рамки або підсвічування навколо списків і пунктів правил */
+.rules-tabs-nav li,
+.rule-dash-list li,
+.about-content ul li {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Прибираємо сірі рамки навколо карток галереї чи блоків на сторінці */
+.courts-gallery-section img,
+.about-media img,
+.carousel-slide {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
