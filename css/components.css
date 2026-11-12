@@ -292,9 +292,8 @@
 /* ==========================================
    7. Скидання стандартних стилів браузера
    ================================---------- */
-button:not(.btn-news-more):not(.btn-primary-purple),
-.carousel-arrow,
-.rules-tabs-nav button {
+button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link),
+.carousel-arrow {
     background-color: transparent !important;
     border: none !important;
     outline: none !important;
@@ -365,20 +364,25 @@ figcaption,
 /* ==========================================
    Пункти меню правил (розділ «Про клуб»)
    ================================---------- */
-.rules-tabs-nav .tab-link {
-    font-family: 'Abel', sans-serif !important;
-    font-size: 22px !important; /* Бажаний розмір шрифту для пунктів */
-    color: #333333 !important;   /* Чорний текст за замовчуванням */
+.rules-tabs-nav button.tab-link {
     background-color: transparent !important;
     border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: 'Abel', sans-serif !important;
+    font-size: 22px !important;
+    color: #333333 !important;
     cursor: pointer;
     text-align: left;
+    padding: 8px 0;
+    width: 100%;
+    display: block;
     transition: color 0.2s ease;
 }
 
-/* Фіолетовий колір ТІЛЬКИ при наведенні миші або активному виборі */
-.rules-tabs-nav .tab-link:hover,
-.rules-tabs-nav .tab-link.active,
-.rules-tabs-nav button[aria-selected="true"] {
+/* Фіолетовий колір при наведенні миші АБО коли вкладка активна */
+.rules-tabs-nav button.tab-link:hover,
+.rules-tabs-nav button.tab-link.active,
+.rules-tabs-nav button.tab-link[aria-selected="true"] {
     color: #8D86C9 !important;
 }
