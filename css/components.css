@@ -292,7 +292,7 @@
 /* ==========================================
    7. Скидання стандартних стилів браузера
    ================================---------- */
-button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link),
+button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header),
 .carousel-arrow {
     background-color: transparent !important;
     border: none !important;
