@@ -386,3 +386,81 @@ figcaption,
 .rules-tabs-nav button.tab-link[aria-selected="true"] {
     color: #8D86C9 !important;
 }
+
+/* ==========================================
+   11. Кремові блоки та FAQ («Спортивний клуб», «Дитячий теніс» і «Про клуб»)
+   ========================================== */
+.info-card-beige,
+.about-content {
+    background-color: #F5EBDF;
+    padding: 50px 60px;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #222222;
+    margin-bottom: 40px;
+}
+
+.about-content h2 {
+    font-family: 'Abel', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    color: #222222;
+}
+
+.about-content h3 {
+    font-family: 'Abel', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 30px 0 18px 0;
+    color: #222222;
+}
+
+.info-card-beige .card-intro-title {
+    font-size: 18px;
+    margin: 0 0 18px 0;
+}
+
+.info-card-beige p,
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 18px 0;
+}
+
+.info-card-beige p:last-child,
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Фіолетові квадратні маркери для всіх списків у кремових блоках */
+.custom-bullet-list,
+.advantages-list,
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.custom-bullet-list li,
+.advantages-list li,
+.about-content ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.custom-bullet-list li::before,
+.advantages-list li::before,
+.about-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #8D86C9;
+}
+
