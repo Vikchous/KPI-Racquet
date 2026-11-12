@@ -319,3 +319,26 @@ button,
     background: transparent !important;
     box-shadow: none !important;
 }
+
+/* ==========================================
+   Фіксація шрифтів для кнопок, табів та підписів
+   ================================---------- */
+
+/* 1. Шрифт Abel для всіх кнопок, табів правил та плашок */
+button, 
+.hero_card, 
+.accordion-header, 
+.btn-news-more,
+.rules-tabs-nav button, 
+.tab-link {
+    font-family: 'Abel', sans-serif !important;
+}
+
+/* 2. Основний шрифт Abhaya Libre для підписів у галереї («Зручне кафе» тощо) */
+figcaption,
+.carousel-caption,
+.slide-caption,
+.about-media p,
+.about-media span {
+    font-family: 'Abhaya Libre', serif !important;
+}
