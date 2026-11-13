@@ -1,0 +1,260 @@
+/* ==========================================
+   1. Глобальні стилі та брендбук Racquet
+   ================================---------- */
+body {
+    background-color: #FFFFFF;
+    color: #222222;
+    font-family: 'Abhaya Libre', serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    color: #8D86C9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для центрування */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/*
+   2. Шапка сайту та внутрішні банери */
+
+/* Банери внутрішніх сторінок */
+.hero-section,
+.about-hero,
+.news-hero,
+.kids-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero-section h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+/* фонові картинки для внутрішніх сторінок */
+.news-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
+}
+
+.about-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/about-bg.jpg');
+}
+
+.kids-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
+}
+
+/* Шапка сайту  */
+.main-header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent !important;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Контейнер усередині шапки */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Збільшений логотип */
+.logo img {
+    height: 85px; 
+    width: auto;
+    display: block;
+}
+
+.main-nav ul,
+.lang-switcher {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a,
+.lang-switcher a,
+.lang-switcher span {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-nav a:hover,
+.main-nav a.active,
+.lang-switcher a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switcher {
+    gap: 6px;
+}
+
+.lang-switcher li:first-child::after {
+    content: "\\";
+    color: #FFFFFF;
+    margin-left: 6px;
+}
+
+.header-socials,
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-socials img,
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+/*
+   3. Головний банер головної сторінки
+*/
+.hero-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero_section {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto auto 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero_section h1 {
+    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 40px 0;
+}
+
+/* Футер сайту */
+.main-footer {
+    background-color: #F5EBDF;
+    color: #242038;
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-socials img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 20px;
+    width: 100%;
+}
