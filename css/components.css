@@ -1,6 +1,4 @@
-/* ==========================================
-   1. Стилі для модальних вікон (Popover)
-   ================================---------- */
+/* 1. Стилі для модальних вікон  */
 .modal-window {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -33,9 +31,7 @@
     line-height: 1;
 }
 
-/* ==========================================
-   2. Поля введення (Input, Select, Textarea)
-   ================================---------- */
+/* 2. Поля введення (Input, Select, Textarea) */
 .modal-window input[type="text"],
 .modal-window input[type="tel"],
 .modal-window input[type="email"],
@@ -69,9 +65,7 @@
     border: 2px solid #FF3333;
 }
 
-/* ==========================================
-   3. Кнопки всередині модальних вікон
-   ================================---------- */
+/* 3. Кнопки всередині модальних вікон */
 .modal-window button[type="submit"],
 .modal-window .btn-submit,
 .modal-window .btn-next,
@@ -96,9 +90,7 @@
     transform: translateY(-1px);
 }
 
-/* ==========================================
-   4. Фірмові плашки та картки послуг (Hero-секція)
-   ================================---------- */
+/* 4. Фірмові плашки та картки послуг */
 .hero_cards {
     display: flex;
     gap: 15px;
@@ -166,9 +158,7 @@
     object-fit: contain;
 }
 
-/* ==========================================
-   5. Елементи акордеону («Ціни на послуги» тощо)
-   ================================---------- */
+/* 5. Елементи акордеону («Ціни на послуги» тощо)*/
 .accordion-header {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -209,9 +199,7 @@
     object-fit: contain;
 }
 
-/* ==========================================
-   6. Карточки новин (news.html)
-   ================================---------- */
+/* 6. Карточки новин */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -289,9 +277,7 @@
     background-color: #7A72B8 !important;
 }
 
-/* ==========================================
-   7. Скидання стандартних стилів браузера
-   ================================---------- */
+/* 7. Скидання стандартних стилів браузера */
 button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success),
 .carousel-arrow {
     background-color: transparent !important;
@@ -321,9 +307,7 @@ button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_car
     box-shadow: none !important;
 }
 
-/* ==========================================
-   8. Фіксація шрифтів та інтерактивних елементів
-   ================================---------- */
+/* 8. Фіксація шрифтів та інтерактивних елементів */
 button, 
 .hero_card, 
 .accordion-header, 
@@ -361,9 +345,7 @@ figcaption,
     border-radius: 0 !important;
 }
 
-/* ==========================================
-   9. Пункти меню правил (розділ «Про клуб»)
-   ================================---------- */
+/* 9. Пункти меню правил (розділ «Про клуб») */
 .rules-tabs-nav button.tab-link {
     background-color: transparent !important;
     border: none !important;
@@ -387,9 +369,7 @@ figcaption,
     color: #8D86C9 !important;
 }
 
-/* ==========================================
-   10. Кремові блоки та FAQ («Спортивний клуб», «Дитячий теніс» і «Про клуб»)
-   ========================================== */
+/* 10. Кремові блоки та FAQ («Спортивний клуб», «Дитячий теніс» і «Про клуб»)*/
 .info-card-beige,
 .about-content {
     background-color: #F5EBDF;
@@ -464,9 +444,7 @@ figcaption,
     background-color: #8D86C9;
 }
 
-/* ==========================================
-   11. Великі фіолетові цифри (about.html)
-   ========================================== */
+/* 11. Великі фіолетові цифри (about.html)*/
 .club-stats {
     display: flex;
     justify-content: space-between;
@@ -498,9 +476,7 @@ figcaption,
     color: #222222;
 }
 
-/* ==========================================
-   12. Заокруглені плашки FAQ (kids_tennis.html)
-   ========================================== */
+/* 12. Заокруглені плашки FAQ  */
 .faq-staggered-grid {
     display: flex;
     flex-direction: column;
