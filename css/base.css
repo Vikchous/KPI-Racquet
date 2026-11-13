@@ -30,11 +30,10 @@ a:hover {
     box-sizing: border-box;
 }
 
-/* ==========================================
-   2. Шапка сайту та внутрішні банери (Hero)
-   ================================---------- */
+/*
+   2. Шапка сайту та внутрішні банери */
 
-/* Банери внутрішніх сторінок (мають position: relative, щоб абсолютна шапка трималася всередині них) */
+/* Банери внутрішніх сторінок */
 .hero-section,
 .about-hero,
 .news-hero,
@@ -48,7 +47,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 110px; /* Запас зверху, щоб шапка не перекривала текст заголовка */
+    padding-top: 110px;
     padding-bottom: 40px;
     box-sizing: border-box;
 }
@@ -61,7 +60,7 @@ a:hover {
     text-align: center;
 }
 
-/* Унікальні фонові картинки для внутрішніх сторінок */
+/* фонові картинки для внутрішніх сторінок */
 .news-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
 }
@@ -74,7 +73,7 @@ a:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
 }
 
-/* Шапка сайту (накладена поверх банера) */
+/* Шапка сайту  */
 .main-header {
     position: absolute; 
     top: 0;
@@ -160,9 +159,9 @@ a:hover {
     display: block;
 }
 
-/* ==========================================
-   3. Головний банер головної сторінки (Index Hero)
-   ================================---------- */
+/*
+   3. Головний банер головної сторінки
+*/
 .hero-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/hero-bg.jpg');
     background-size: cover;
@@ -192,11 +191,9 @@ a:hover {
     margin: 0 0 40px 0;
 }
 
-/* ==========================================
-   Футер сайту
-   ================================---------- */
+/* Футер сайту */
 .main-footer {
-    background-color: #F5EBDF; /* Світло-бежевий фон як на макеті */
+    background-color: #F5EBDF;
     color: #242038;
     padding: 40px 0 20px 0;
     margin-top: 60px;
@@ -212,7 +209,6 @@ a:hover {
     box-sizing: border-box;
 }
 
-/* Робимо так, щоб навігація у футері була розташована по центру */
 .footer-nav {
     flex: 1;
     display: flex;
@@ -228,7 +224,7 @@ a:hover {
 }
 
 .footer-nav a {
-    color: #444444; /* Темний колір для посилань у футері */
+    color: #444444;
     text-decoration: none;
     font-size: 16px;
     transition: opacity 0.2s ease;
@@ -239,7 +235,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Іконки соцмереж у футері */
 .footer-socials {
     display: flex;
     align-items: center;
@@ -253,14 +248,13 @@ a:hover {
     display: block;
 }
 
-/* Стиль для тексту копірайту по центру внизу */
 .footer-copy {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 0;
     color: #666666;
     font-size: 14px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08); /* Тонка отерта лінія зверху (опціонально) */
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 20px;
     width: 100%;
 }

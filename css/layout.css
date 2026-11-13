@@ -1,0 +1,937 @@
+/* ==========================================================================
+   layout.css — геометрія макету сайту Racquet
+   Сітки (CSS Grid), гнучкі ряди (Flexbox), навігація, бургер-меню
+   та медіазапити для планшетів і мобільних пристроїв.
+
+   Точки зламу (mobile-first не використовується, бо базові стилі — десктопні):
+     1024px — планшет (бургер-меню, 2 колонки замість 3–4)
+     767px  — мобільний телефон (1 колонка)
+     420px  — вузькі телефони (дрібні корекції відступів і шрифтів)
+   ========================================================================== */
+
+/*  0. Утиліти та загальні правила*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+main > section {
+    padding: 60px 0;
+}
+
+main > section.hero-section {
+    padding-top: 110px;
+    padding-bottom: 40px;
+}
+
+main > section h2 {
+    font-size: 36px;
+    font-weight: normal;
+    color: #242038;
+    margin: 0 0 30px 0;
+}
+
+
+.court_types_section,
+.about-section,
+.trainers-section,
+.pricing-services-section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+
+.admin-hero {
+    background-color: #242038;
+}
+
+/* 1. Шапка та навігація (Flexbox) */
+.header-container {
+    gap: 30px;
+}
+
+.main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Чекбокс-перемикач бургер-меню: прихований, але доступний з клавіатури */
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+}
+
+/* Іконка бургера - три смужки, на десктопі прихована */
+.burger {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.burger span {
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+
+.burger span:nth-child(1) { top: 14px; }
+.burger span:nth-child(2) { top: 21px; }
+.burger span:nth-child(3) { top: 28px; }
+
+/* Стан «відкрито»: смужки складаються в хрестик */
+.nav-toggle:checked + .burger span:nth-child(1) {
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.nav-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle:checked + .burger span:nth-child(3) {
+    top: 21px;
+    transform: rotate(-45deg);
+}
+
+.nav-toggle:focus-visible + .burger {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+/* 2. Головна: банер і картки послуг */
+.hero_cards {
+    flex-wrap: wrap;
+}
+
+.hero_card {
+    min-width: 240px;
+}
+
+/* 3. Головна: типи кортів */
+.court_types_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.court_types_section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.court_types_section img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.court_types_section h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #242038;
+    margin: 0;
+}
+
+/* 4. Головна: блок «Спортивний клуб» */
+.about-section {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    align-items: stretch;
+    gap: 0;
+}
+
+.about-section .about-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-section .about-content {
+    margin-bottom: 0;
+}
+
+/*  5. Каруселі: тренери, послуги, фото кортів
+   Flexbox + scroll-snap: гортання свайпом/скролом,
+   стрілки прокручують стрічку */
+.trainers-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "title    controls"
+        "carousel carousel";
+    align-items: center;
+    column-gap: 20px;
+}
+
+.trainers-section > h2 {
+    grid-area: title;
+}
+
+.trainers-controls {
+    grid-area: controls;
+    margin-bottom: 30px;
+}
+
+.trainers-carousel {
+    grid-area: carousel;
+    min-width: 0;
+}
+
+.trainers-controls,
+.services-controls,
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Кнопки-стрілки однакового розміру */
+.carousel-btn,
+.carousel-arrow {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0;
+}
+
+.carousel-btn img,
+.carousel-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-btn:hover,
+.carousel-arrow:hover {
+    opacity: 0.85;
+}
+
+/* Спільна поведінка стрічок каруселей */
+.trainers-track,
+.services-track,
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #8D86C9 transparent;
+    padding-bottom: 12px;
+}
+
+.trainers-track > *,
+.services-track > *,
+.carousel-track > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* Тренери: 4 картки на десктопі */
+.trainer-card {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    display: flex;
+    flex-direction: column;
+}
+
+.trainer-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.trainer-card h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #242038;
+    margin: 0 0 6px 0;
+}
+
+.trainer-card p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* 6. Головна: «Ціни і абонементи» + «Послуги»  */
+.pricing-services-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.pricing-block,
+.services-block {
+    min-width: 0;
+}
+
+/* Акордеон на <details> */
+.accordion-header {
+    list-style: none;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-header .arrow-icon {
+    transform: rotate(-90deg);
+    transition: transform 0.25s ease;
+}
+
+.accordion-item[open] .accordion-header .arrow-icon {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    max-width: 500px;
+    margin: 0 auto 16px auto;
+    padding: 6px 25px 16px 25px;
+}
+
+.accordion-content p {
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.services-header h2 {
+    margin: 0;
+}
+
+/* Послуги */
+.service-card {
+    flex-basis: calc((100% - 24px) / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+    text-align: left;
+    color: #242038;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-card:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.service-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3,
+.service-card-title {
+    margin: 0;
+    color: #242038;
+}
+
+/* 7. «Про клуб»: галерея кортів */
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery-header h2 {
+    margin: 0;
+}
+
+/* 2 слайди одночасно на десктопі */
+.carousel-slide {
+    position: relative;
+    flex-basis: calc((100% - 24px) / 2);
+}
+
+.carousel-slide img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+}
+
+/* Плашка з назвою корту  */
+.carousel-slide .court-badge {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* 8. «Про клуб»: фото + опис */
+.about-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    align-items: stretch;
+}
+
+.about-grid .about-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-grid .about-details {
+    margin-bottom: 0;
+}
+
+/* 9. «Про клуб» */
+.rules-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.rules-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 20px;
+}
+
+/* Видно лише активну вкладку */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    position: static !important;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+.rules-panels h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #242038;
+    margin: 0 0 14px 0;
+}
+
+.rule-group {
+    margin-bottom: 30px;
+}
+
+.rule-group p,
+.rules-panels p {
+    line-height: 1.6;
+}
+
+/* Маркери-тире для списків правил */
+.rule-dash-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.rule-dash-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.rule-dash-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #8D86C9;
+}
+
+/* 10. «Дитячий теніс" */
+.kids-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cta-wrapper .btn-primary-purple {
+    padding: 14px 48px;
+    font-size: 18px;
+}
+
+/* 11. Новини: сітка не виходить за екран на вузьких телефонах*/
+.news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+}
+
+/* 12. Адмін-панель */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+/* 13. Модальні вікна*/
+.modal-window {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* 14. Футер*/
+.footer-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* МЕДІАЗАПИТИ */
+
+/* Невеликі ноутбуки */
+@media (max-width: 1200px) {
+    .main-nav ul {
+        gap: 18px;
+    }
+
+    .trainer-card {
+        flex-basis: calc((100% - 2 * 24px) / 3);
+    }
+}
+
+/* Планшети бургер-меню  */
+@media (max-width: 1024px) {
+    .logo img {
+        height: 64px;
+    }
+
+    .header-container {
+        gap: 16px;
+    }
+
+    /* Порядок у шапці: логотип, мова + соцмережі , бургер */
+    .logo { order: 1; }
+    .header-actions { order: 2; margin-left: auto; }
+    .burger { order: 3; display: block; }
+
+    /* Меню випадає під шапкою */
+    .main-nav {
+        order: 4;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #242038;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: max-height 0.3s ease, visibility 0.3s;
+    }
+
+    .nav-toggle:checked ~ .main-nav {
+        max-height: 80vh;
+        visibility: visible;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+
+    .main-nav a.active {
+        color: #8D86C9;
+        opacity: 1;
+    }
+
+    .main-nav a:hover {
+        background-color: rgba(141, 134, 201, 0.2);
+    }
+
+    /* Сітки: менше колонок */
+    .court_types_section {
+        gap: 20px;
+    }
+
+    .court_types_section h3 {
+        font-size: 18px;
+    }
+
+    .about-section,
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-card-beige,
+    .about-content {
+        padding: 40px;
+    }
+
+    .pricing-services-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .accordion-header,
+    .accordion-content {
+        max-width: none;
+    }
+
+    .service-card {
+        flex-basis: calc((100% - 2 * 24px) / 3);
+    }
+
+    .rules-layout {
+        grid-template-columns: 260px 1fr;
+        gap: 30px;
+    }
+
+    .rules-tabs-nav button.tab-link {
+        font-size: 18px !important;
+    }
+
+    .hero_section h1 {
+        font-size: 46px;
+    }
+}
+
+/* Мобільні одна колонка*/
+@media (max-width: 767px) {
+    main > section {
+        padding: 40px 0;
+    }
+
+    main > section h2,
+    .about-content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        height: 52px;
+    }
+
+    .main-header {
+        padding: 12px 0;
+    }
+
+    .header-socials {
+        display: none;
+    }
+
+    .hero-section,
+    .about-hero,
+    .news-hero,
+    .kids-hero,
+    main > section.hero-section {
+        min-height: 200px;
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    /* Головний банер */
+    .hero-wrapper {
+        min-height: 100svh;
+    }
+
+    .hero_section h1 {
+        font-size: 34px;
+        margin-bottom: 24px;
+    }
+
+    .hero_cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero_card {
+        min-width: 0;
+        padding: 18px 22px;
+    }
+
+    /* Типи кортів */
+    .court_types_section {
+        grid-template-columns: 1fr;
+    }
+
+    .court_types_section img {
+        aspect-ratio: 16 / 9;
+    }
+
+    /* Фото + текст */
+    .about-section,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section .about-media img,
+    .about-grid .about-media img {
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+    }
+
+    .info-card-beige,
+    .about-content {
+        padding: 28px 20px;
+    }
+
+    .club-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .stat-item {
+        max-width: none;
+    }
+
+    /* Каруселі */
+    .trainer-card {
+        flex-basis: 75%;
+    }
+
+    .service-card {
+        flex-basis: 75%;
+    }
+
+    .carousel-slide {
+        flex-basis: 100%;
+    }
+
+    .carousel-slide .court-badge {
+        font-size: 18px !important;
+        padding: 8px 16px;
+    }
+
+    .trainers-track,
+    .services-track,
+    .carousel-track {
+        gap: 16px;
+    }
+
+    /* Правила */
+    .rules-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rules-tabs-nav {
+        position: static;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scroll-snap-type: x proximity;
+    }
+
+    .rules-tabs-nav li {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .rules-tabs-nav button.tab-link {
+        width: auto;
+        white-space: nowrap;
+        font-size: 16px !important;
+        padding: 8px 14px;
+        border: 1px solid #8D86C9 !important;
+    }
+
+    .rules-tabs-nav button.tab-link.active,
+    .rules-tabs-nav button.tab-link[aria-selected="true"] {
+        background-color: #8D86C9 !important;
+        color: #FFFFFF !important;
+    }
+
+    /* Дитячий теніс */
+    .kids-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .kids-gallery-grid .gallery-item:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .kids-gallery-grid .gallery-item:last-child img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .faq-staggered-grid {
+        gap: 16px;
+        margin: 24px auto;
+    }
+
+    .faq-card {
+        max-width: none;
+        padding: 22px 26px;
+        border-radius: 28px;
+    }
+
+    .faq-card.item-left,
+    .faq-card.item-right {
+        align-self: stretch;
+    }
+
+    /* Новини */
+    .news-grid {
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    /* Футер */
+    .main-footer {
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-nav ul {
+        gap: 12px 20px;
+    }
+
+    .modal-window {
+        padding: 30px 20px;
+        width: 94%;
+    }
+}
+
+/* Вузькі телефони */
+@media (max-width: 420px) {
+    .container,
+    .court_types_section,
+    .about-section,
+    .trainers-section,
+    .pricing-services-section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .hero_section {
+        padding: 0 16px;
+    }
+
+    .hero_section h1 {
+        font-size: 30px;
+    }
+
+    .stat-number {
+        font-size: 44px;
+    }
+
+    .trainer-card,
+    .service-card {
+        flex-basis: 85%;
+    }
+
+    .lang-switcher a,
+    .lang-switcher span {
+        font-size: 14px;
+    }
+}
+
+/*  Користувачі, що вимкнули анімації в ОС*/
+@media (prefers-reduced-motion: reduce) {
+    .trainers-track,
+    .services-track,
+    .carousel-track {
+        scroll-behavior: auto;
+    }
+
+    .burger span,
+    .main-nav,
+    .accordion-header .arrow-icon {
+        transition: none;
+    }
+}

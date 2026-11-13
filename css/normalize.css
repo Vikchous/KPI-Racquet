@@ -1,4 +1,7 @@
-* Restore the focus styles unset by the previous rule.
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css (фрагмент) */
+
+  /**
+   * Restore the focus styles unset by the previous rule.
    */
   
   button:-moz-focusring,
@@ -8,7 +11,7 @@
     outline: 1px dotted ButtonText;
   }
   
-  /
+  /**
    * Correct the padding in Firefox.
    */
   
@@ -16,7 +19,7 @@
     padding: 0.35em 0.75em 0.625em;
   }
   
-  /
+  /**
    * 1. Correct the text wrapping in Edge and IE.
    * 2. Correct the color inheritance from `fieldset` elements in IE.
    * 3. Remove the padding so developers are not caught out when they zero out
@@ -32,7 +35,7 @@
     white-space: normal; /* 1 */
   }
   
-  /
+  /**
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
   
@@ -40,7 +43,7 @@
     vertical-align: baseline;
   }
   
-  /
+  /**
    * Remove the default vertical scrollbar in IE 10+.
    */
   
@@ -48,7 +51,7 @@
     overflow: auto;
   }
   
-  /
+  /**
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
@@ -59,7 +62,7 @@
     padding: 0; /* 2 */
   }
   
-  /
+  /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
   
@@ -68,7 +71,7 @@
     height: auto;
   }
   
-  /
+  /**
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
@@ -78,7 +81,7 @@
     outline-offset: -2px; /* 2 */
   }
   
-  /
+  /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
   
@@ -86,7 +89,7 @@
     -webkit-appearance: none;
   }
   
-  /
+  /**
    * 1. Correct the inability to style clickable types in iOS and Safari.
    * 2. Change font properties to inherit in Safari.
    */
@@ -118,7 +121,7 @@
   /* Misc
      ========================================================================== */
   
-  /
+  /**
    * Add the correct display in IE 10+.
    */
   
@@ -126,7 +129,7 @@
     display: none;
   }
   
-  /
+  /**
    * Add the correct display in IE 10.
    */
   
