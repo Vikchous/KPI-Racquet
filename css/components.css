@@ -518,10 +518,14 @@ figcaption,
 }
 
 /* ==========================================
-   Додатково: Жирний шрифт для меню та футера на всіх сторінках
+   Жирний шрифт для меню, футера та перемикача мов на всіх сторінках
    ================================---------- */
 .main-nav a,
 .main-nav span,
-.footer-nav a {
+.footer-nav a,
+.lang-switcher a,
+.lang-switcher span,
+.lang-item a,
+.lang-item span {
     font-weight: bold !important;
 }
