@@ -255,6 +255,13 @@
     flex: 1;
 }
 
+/* Зробити дату всередині модального вікна білою та жирною */
+.modal-window time.news-date,
+.modal-window .news-date {
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+}
+
 /* Головні фірмові кнопки (детальніше, записатись, оформлення абонементу тощо) */
 .btn-news-more,
 .btn-primary-purple {
