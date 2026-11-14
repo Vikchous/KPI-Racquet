@@ -529,3 +529,11 @@ figcaption,
 .lang-item span {
     font-weight: bold !important;
 }
+
+/* Прибираємо підкреслення у посиланнях футера та робимо їх жирними */
+.footer-nav a,
+.footer-nav a:hover,
+.footer-nav a:focus {
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
