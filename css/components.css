@@ -285,7 +285,7 @@
 }
 
 /* 7. Скидання стандартних стилів браузера */
-button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success),
+button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success):not(.btn-danger):not(.btn-secondary),
 .carousel-arrow {
     background-color: transparent !important;
     border: none !important;

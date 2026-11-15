@@ -162,6 +162,7 @@ main > section h2 {
     font-weight: normal;
     color: #242038;
     margin: 0;
+    text-align: center; /* підпис по центру під фото, як у шаблоні */
 }
 
 /* 4. Головна: блок «Спортивний клуб» */
@@ -236,7 +237,7 @@ main > section h2 {
 .carousel-arrow img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* обидві стрілки заповнюють квадрат однаково */
     display: block;
 }
 
@@ -255,9 +256,16 @@ main > section h2 {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #8D86C9 transparent;
-    padding-bottom: 12px;
+    scrollbar-width: none;          /* ховаємо смугу прокрутки (Firefox) */
+    -ms-overflow-style: none;       /* старий Edge */
+}
+
+/* Ховаємо смугу прокрутки в Chrome, Safari, Edge.
+   Гортання лишається: стрілками, свайпом на телефоні, тачпадом або Shift + колесо */
+.trainers-track::-webkit-scrollbar,
+.services-track::-webkit-scrollbar,
+.carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
 .trainers-track > *,
@@ -523,9 +531,57 @@ main > section h2 {
     margin-top: 20px;
 }
 
-.cta-wrapper .btn-primary-purple {
-    padding: 14px 48px;
-    font-size: 18px;
+
+/* 10.1. Єдиний розмір кнопок на всьому сайті:
+   однакова висота, шрифт і відступи для фірмових кнопок,
+   кнопок у модальних вікнах і в адмін-панелі.
+   Стрілки каруселей — однакові квадрати 44×44 */
+.btn-primary-purple,
+.btn-news-more,
+.modal-window .btn-submit,
+.modal-window .btn-next,
+.modal-window .btn-back,
+.modal-window .btn-success,
+.modal-window button[type="submit"],
+.btn-danger,
+.btn-secondary {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 28px !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 1.2;
+    border: none;
+    border-radius: 0 !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Проміжок між кнопками «Назад» і «Далі/Підтвердити» в модальних вікнах */
+.modal-window .btn-back + .btn-next,
+.modal-window .btn-back + .btn-submit {
+    margin-left: 10px;
+}
+
+/* Кнопки дій у таблицях адмін-панелі */
+.btn-danger {
+    background-color: #C0504D !important;
+    color: #FFFFFF !important;
+}
+
+.btn-secondary {
+    background-color: #E4E1F3 !important;
+    color: #242038 !important;
+}
+
+.btn-danger:hover {
+    background-color: #A8403D !important;
+}
+
+.btn-secondary:hover {
+    background-color: #D3CFEA !important;
 }
 
 /* 11. Новини: сітка не виходить за екран на вузьких телефонах*/
