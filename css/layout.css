@@ -335,6 +335,39 @@ main > section h2 {
     transform: rotate(90deg);
 }
 
+/* Плавне відкриття акордеона (без JS).
+   Сучасні браузери (Chrome/Edge 131+): анімується сама висота вмісту <details>
+   завдяки interpolate-size і псевдоелементу ::details-content */
+.accordion-item {
+    interpolate-size: allow-keywords;
+}
+
+.accordion-item::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 0.4s ease, content-visibility 0.4s allow-discrete;
+}
+
+.accordion-item[open]::details-content {
+    block-size: auto;
+}
+
+/* Вміст ще й плавно проявляється та трохи «виїжджає» зверху — працює в усіх браузерах */
+.accordion-item[open] .accordion-content {
+    animation: accordion-open 0.4s ease;
+}
+
+@keyframes accordion-open {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .accordion-content {
     max-width: 500px;
     margin: 0 auto 16px auto;
@@ -599,7 +632,109 @@ main > section h2 {
 .admin-table {
     width: 100%;
     min-width: 760px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E4E1F3;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    color: #242038;
+    box-shadow: 0 4px 16px rgba(36, 32, 56, 0.06);
+}
+
+/* Підпис таблиці — зліва над таблицею, дрібними літерами */
+.admin-table caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0 0 10px 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6B6590;
+}
+
+/* Шапка таблиці — фірмовий фіолетовий */
+.admin-table thead th {
+    background-color: #8D86C9;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-align: left;
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 12px 14px;
+    border-top: 1px solid #ECE8F5;
+    vertical-align: middle;
+}
+
+/* «Зебра» і підсвічування рядка під курсором */
+.admin-table tbody tr:nth-child(even) {
+    background-color: #FAF8FD;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #F1EEFA;
+}
+
+/* Номер заявки виділено кольором */
+.admin-table td:first-child {
+    color: #8D86C9;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Телефон, дата й кнопки не переносяться на новий рядок */
+.admin-table td:nth-child(3),
+.admin-table td:nth-child(5) {
+    white-space: nowrap;
+}
+
+/* Колонка «Дії»: якщо місця мало, кнопки стають одна під одну */
+.admin-table td:last-child {
+    min-width: 130px;
+}
+
+.admin-table td:last-child button {
+    margin: 2px 6px 2px 0;
+}
+
+/* Компактні кнопки дій у таблицях (клас .btn-sm) — однакові в усіх таблицях,
+   щоб рядок не розтягувався і таблиця вміщалась на екрані ПК */
+.admin-table .btn-sm {
+    min-height: 34px;
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+    margin-top: 2px;
+}
+
+
+/* Статус заявки — кольоровий «бейдж» */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.status-pending {
+    background-color: #FFF1D6;
+    color: #8A5D00;
+}
+
+.status-confirmed {
+    background-color: #DFF3E4;
+    color: #2E7D46;
+}
+
+.admin-card {
+    margin-bottom: 30px;
+}
+
+.admin-card-desc {
+    margin: 0 0 20px 0;
 }
 
 /* 13. Модальні вікна*/
@@ -987,7 +1122,12 @@ main > section h2 {
 
     .burger span,
     .main-nav,
-    .accordion-header .arrow-icon {
+    .accordion-header .arrow-icon,
+    .accordion-item::details-content {
         transition: none;
+    }
+
+    .accordion-item[open] .accordion-content {
+        animation: none;
     }
 }
