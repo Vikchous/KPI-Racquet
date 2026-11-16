@@ -1,4 +1,4 @@
-/* 1. Стилі для модальних вікон  */
+/* 1. Стилі для модальних вікон та плавна анімація (Popover) */
 .modal-window {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -8,6 +8,38 @@
     max-width: 500px;
     width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
+}
+
+.modal-window:popover-open {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+@starting-style {
+    .modal-window:popover-open {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+}
+
+.modal-window::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease, overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
+}
+
+.modal-window:popover-open::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    .modal-window:popover-open::backdrop {
+        opacity: 0;
+    }
 }
 
 .modal-window h2,
@@ -31,58 +63,7 @@
     line-height: 1;
 }
 
-/* ==========================================
-   Плавна анімація для модальних вікон (Popover)
-   ================================---------- */
-
-.modal-window {
-    background-color: #8D86C9;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 16px;
-    padding: 35px 30px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-
-    /* Параметри анімації при закритті / початкові стани */
-    opacity: 0;
-    transform: scale(0.95) translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
-}
-
-/* Коли поповер відкритий (активний стан) */
-.modal-window:popover-open {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-
-/* Стартовий стиль для анімації появи */
-@starting-style {
-    .modal-window:popover-open {
-        opacity: 0;
-        transform: scale(0.95) translateY(10px);
-    }
-}
-
-/* Затемнення фону з плавним зникненням */
-.modal-window::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease, overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
-}
-
-.modal-window:popover-open::backdrop {
-    opacity: 1;
-}
-
-@starting-style {
-    .modal-window:popover-open::backdrop {
-        opacity: 0;
-    }
-}
-
-/* 2. Поля введення (Input, Select, Textarea) */
+/* 2. Поля введення */
 .modal-window input[type="text"],
 .modal-window input[type="tel"],
 .modal-window input[type="email"],
@@ -209,7 +190,7 @@
     object-fit: contain;
 }
 
-/* 5. Елементи акордеону («Ціни на послуги» тощо)*/
+/* 5. Елементи акордеону */
 .accordion-header {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -250,7 +231,7 @@
     object-fit: contain;
 }
 
-/* 6. Карточки новин */
+/* 6. Картки новин */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -306,20 +287,19 @@
     flex: 1;
 }
 
-/* Дата всередині модального вікна біла та жирна */
 .modal-window time.news-date,
 .modal-window .news-date {
     color: #FFFFFF !important;
     font-weight: bold !important;
 }
 
-/* Головні фірмові кнопки (детальніше, записатись, оформлення абонементу тощо) */
+/* Головні фірмові кнопки */
 .btn-news-more,
 .btn-primary-purple {
     background-color: #8D86C9 !important;
     color: #FFFFFF !important;
     border: none !important;
-    border-radius: 0 !important; /* Гострі кути */
+    border-radius: 0 !important;
     padding: 10px 28px;
     font-size: 15px;
     font-family: 'Abel', sans-serif !important;
@@ -365,7 +345,7 @@ button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_car
     box-shadow: none !important;
 }
 
-/* 8. Фіксація шрифтів та інтерактивних елементів */
+/* 8. Фіксація шрифтів */
 button, 
 .hero_card, 
 .accordion-header, 
@@ -389,7 +369,6 @@ figcaption,
     font-weight: normal;
 }
 
-/* Плашки кортів на сторінці «Про клуб» */
 .court-badge {
     background-color: #8D86C9 !important;
     color: #FFFFFF !important;
@@ -403,7 +382,7 @@ figcaption,
     border-radius: 0 !important;
 }
 
-/* 9. Пункти меню правил (розділ «Про клуб») */
+/* 9. Меню правил */
 .rules-tabs-nav button.tab-link {
     background-color: transparent !important;
     border: none !important;
@@ -420,14 +399,13 @@ figcaption,
     transition: color 0.2s ease;
 }
 
-/* Фіолетовий колір при наведенні миші АБО коли вкладка активна */
 .rules-tabs-nav button.tab-link:hover,
 .rules-tabs-nav button.tab-link.active,
 .rules-tabs-nav button.tab-link[aria-selected="true"] {
     color: #8D86C9 !important;
 }
 
-/* 10. Кремові блоки та FAQ («Спортивний клуб», «Дитячий теніс» і «Про клуб»)*/
+/* 10. Кремові блоки та FAQ */
 .info-card-beige,
 .about-content {
     background-color: #F5EBDF;
@@ -471,7 +449,6 @@ figcaption,
     margin-bottom: 0;
 }
 
-/* Фіолетові квадратні маркери для всіх списків у кремових блоках */
 .custom-bullet-list,
 .advantages-list,
 .about-content ul {
@@ -502,7 +479,7 @@ figcaption,
     background-color: #8D86C9;
 }
 
-/* 11. Великі фіолетові цифри (about.html)*/
+/* 11. Статистика */
 .club-stats {
     display: flex;
     justify-content: space-between;
@@ -534,7 +511,7 @@ figcaption,
     color: #222222;
 }
 
-/* 12. Заокруглені плашки FAQ  */
+/* 12. Плашки FAQ */
 .faq-staggered-grid {
     display: flex;
     flex-direction: column;
@@ -575,9 +552,7 @@ figcaption,
     color: #222222;
 }
 
-/* ==========================================
-   Жирний шрифт для меню, футера та перемикача мов на всіх сторінках
-   ================================---------- */
+/* Навігація та перемикач мов */
 .main-nav a,
 .main-nav span,
 .footer-nav a,
@@ -588,7 +563,6 @@ figcaption,
     font-weight: bold !important;
 }
 
-/* Прибираємо підкреслення у посиланнях футера та робимо їх жирними */
 .footer-nav a,
 .footer-nav a:hover,
 .footer-nav a:focus {
@@ -596,45 +570,35 @@ figcaption,
     font-weight: bold !important;
 }
 
-/* ==========================================
-   Стилізація секції кортів
-   ================================---------- */
-.court_types_section {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
+/* 13. Візуальне оформлення карток кортів (Компонент) */
 .court_types_section > div {
-    position: relative;
-    overflow: hidden;
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    border-radius: 0 !important; 
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .court_types_section img {
-    width: 100%;
-    height: 460px; /* Фіксована висота для вертикального вигляду */
-    object-fit: cover; /* Щоб фото не розтягувалося і не спотворювалося */
-    display: block;
+    width: 100% !important;
+    height: 460px !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 0 !important;
 }
 
-/* Назва корта поверх зображення */
 .court_types_section h3 {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
+    position: absolute !important;
+    bottom: 30px !important;
+    left: 25px !important;
+    right: 25px !important;
     color: #FFFFFF !important;
     font-family: 'Abel', sans-serif !important;
     font-size: 26px !important;
-    font-weight: bold;
-    margin: 0;
-    z-index: 2;
-    text-align: left;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+    text-align: left !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
 }
