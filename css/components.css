@@ -131,11 +131,11 @@
 }
 
 .hero_card {
-    background-color: #8D86C9 !important;
-    color: #FFFFFF !important;
-    border-radius: 0 !important;
-    border: none !important;
-    outline: none !important;
+    background-color: #8D86C9;
+    color: #FFFFFF;
+    border-radius: 0;
+    border: none;
+    outline: none;
     padding: 24px 32px;
     display: flex;
     flex-direction: row;
@@ -145,19 +145,19 @@
     text-align: left;
     box-sizing: border-box;
     cursor: pointer;
-    text-decoration: none !important;
+    text-decoration: none;
     flex: 1;
 }
 
 .hero_card:focus,
 .hero_card:active {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .hero_card * {
-    color: #FFFFFF !important;
-    text-decoration: none !important;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .hero_card-content {
@@ -176,7 +176,7 @@
 
 .card-title {
     font-family: 'Abel', sans-serif !important;
-    font-size: 26px !important;
+    font-size: 26px;
     font-weight: bold;
     margin: 0;
     display: block;
@@ -196,8 +196,8 @@
     color: #FFFFFF;
     padding: 15px 25px;
     border-radius: 0;
-    border: none !important;
-    outline: none !important;
+    border: none;
+    outline: none;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -212,8 +212,8 @@
 
 .accordion-header:focus,
 .accordion-header:active {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .accordion-header span,
@@ -296,10 +296,10 @@
 /* Головні фірмові кнопки */
 .btn-news-more,
 .btn-primary-purple {
-    background-color: #8D86C9 !important;
-    color: #FFFFFF !important;
-    border: none !important;
-    border-radius: 0 !important;
+    background-color: #8D86C9;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
     padding: 10px 28px;
     font-size: 15px;
     font-family: 'Abel', sans-serif !important;
@@ -312,37 +312,37 @@
 
 .btn-news-more:hover,
 .btn-primary-purple:hover {
-    background-color: #7A72B8 !important;
+    background-color: #7A72B8;
 }
 
 /* 7. Скидання стандартних стилів браузера */
 button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success):not(.btn-danger):not(.btn-secondary),
 .carousel-arrow {
-    background-color: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .carousel-arrow {
-    background-color: #8D86C9 !important;
-    border: none !important;
+    background-color: #8D86C9;
+    border: none;
 }
 
 .rules-tabs-nav li,
 .rule-dash-list li,
 .about-content ul li {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .courts-gallery-section img,
 .about-media img,
 .carousel-slide {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
+    border: none;
+    background: transparent;
+    box-shadow: none;
 }
 
 /* 8. Фіксація шрифтів */
@@ -365,32 +365,32 @@ figcaption,
 
 .service-card-title,
 .service-card h3 {
-    font-size: 24px !important;
+    font-size: 24px;
     font-weight: normal;
 }
 
 .court-badge {
-    background-color: #8D86C9 !important;
-    color: #FFFFFF !important;
+    background-color: #8D86C9;
+    color: #FFFFFF;
     font-family: 'Abel', sans-serif !important;
-    font-size: 24px !important;
+    font-size: 24px;
     font-weight: normal;
     padding: 12px 24px;
     display: inline-block;
     text-align: center;
     box-sizing: border-box;
-    border-radius: 0 !important;
+    border-radius: 0;
 }
 
 /* 9. Меню правил */
 .rules-tabs-nav button.tab-link {
-    background-color: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
     font-family: 'Abel', sans-serif !important;
-    font-size: 22px !important;
-    color: #333333 !important;
+    font-size: 22px;
+    color: #333333;
     cursor: pointer;
     text-align: left;
     padding: 8px 0;
@@ -402,7 +402,7 @@ figcaption,
 .rules-tabs-nav button.tab-link:hover,
 .rules-tabs-nav button.tab-link.active,
 .rules-tabs-nav button.tab-link[aria-selected="true"] {
-    color: #8D86C9 !important;
+    color: #8D86C9;
 }
 
 /* 10. Кремові блоки та FAQ */
@@ -572,33 +572,33 @@ figcaption,
 
 /* 13. Візуальне оформлення карток кортів (Компонент) */
 .court_types_section > div {
-    position: relative !important;
-    overflow: hidden !important;
-    border-radius: 0 !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
 }
 
 .court_types_section img {
-    width: 100% !important;
-    height: 460px !important;
-    object-fit: cover !important;
-    display: block !important;
-    border-radius: 0 !important;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
 }
 
 .court_types_section h3 {
-    position: absolute !important;
-    bottom: 30px !important;
-    left: 25px !important;
-    right: 25px !important;
-    color: #FFFFFF !important;
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    right: 25px;
+    color: #FFFFFF;
     font-family: 'Abel', sans-serif !important;
-    font-size: 26px !important;
-    font-weight: bold !important;
-    margin: 0 !important;
-    z-index: 2 !important;
-    text-align: center !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
