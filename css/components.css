@@ -113,19 +113,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Центрування для внутрішніх банерів */
     padding-top: 110px;
     padding-bottom: 40px;
     box-sizing: border-box;
 }
 
-.hero-section h1,
+/* Головний заголовок на головній сторінці (ЗЛІВА) */
 .hero-wrapper h1 {
     color: #FFFFFF;
     font-size: 56px;
     font-weight: bold;
     line-height: 1.15;
     margin: 0 0 40px 0;
+    text-align: left;
+}
+
+/* Заголовки на внутрішніх сторінках (ПО ЦЕНТРУ) */
+.hero-section h1,
+.about-hero h1,
+.news-hero h1,
+.kids-hero h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
     text-align: center;
 }
 
