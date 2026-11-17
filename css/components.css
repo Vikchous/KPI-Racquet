@@ -602,3 +602,13 @@ figcaption,
     text-align: center;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
+
+/* Повне прибрання підкреслень для карток послуг (hero_card) у всіх станах */
+.hero_card,
+.hero_card:hover,
+.hero_card:focus,
+.hero_card:active,
+.hero_card *,
+.hero_card *:hover {
+    text-decoration: none !important;
+}
