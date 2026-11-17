@@ -1,4 +1,155 @@
-/* 1. Стилі для модальних вікон та плавна анімація (Popover) */
+/* ==========================================
+   Комплексні компоненти інтерфейсу (Racquet)
+   ========================================== */
+
+/* 1. Шапка сайту (Header) */
+.main-header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent !important;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 85px; 
+    width: auto;
+    display: block;
+}
+
+.main-nav ul,
+.lang-switcher {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a,
+.lang-switcher a,
+.lang-switcher span {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold !important;
+}
+
+.main-nav a:hover,
+.main-nav a.active,
+.lang-switcher a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-switcher {
+    gap: 6px;
+}
+
+.lang-switcher li:first-child::after {
+    content: "\\";
+    color: #FFFFFF;
+    margin-left: 6px;
+}
+
+.header-socials,
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-socials img,
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+/* 2. Головні та внутрішні банери */
+.hero-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero-section,
+.about-hero,
+.news-hero,
+.kids-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero-section h1,
+.hero-wrapper h1 {
+    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.news-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/news-bg.jpg');
+}
+
+.about-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/about-bg.jpg');
+}
+
+.kids-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/kids-bg.jpg');
+}
+
+.hero_section {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto auto 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 3. Стилі для модальних вікон та плавна анімація (Popover) */
 .modal-window {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -63,7 +214,7 @@
     line-height: 1;
 }
 
-/* 2. Поля введення */
+/* 4. Поля введення */
 .modal-window input[type="text"],
 .modal-window input[type="tel"],
 .modal-window input[type="email"],
@@ -97,7 +248,7 @@
     border: 2px solid #FF3333;
 }
 
-/* 3. Кнопки всередині модальних вікон */
+/* 5. Кнопки всередині модальних вікон */
 .modal-window button[type="submit"],
 .modal-window .btn-submit,
 .modal-window .btn-next,
@@ -122,7 +273,7 @@
     transform: translateY(-1px);
 }
 
-/* 4. Фірмові плашки та картки послуг */
+/* 6. Фірмові плашки та картки послуг */
 .hero_cards {
     display: flex;
     gap: 15px;
@@ -155,9 +306,17 @@
     box-shadow: none;
 }
 
-.hero_card * {
+.hero_card *,
+.hero_card *:hover {
     color: #FFFFFF;
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.hero_card,
+.hero_card:hover,
+.hero_card:focus,
+.hero_card:active {
+    text-decoration: none !important;
 }
 
 .hero_card-content {
@@ -190,7 +349,7 @@
     object-fit: contain;
 }
 
-/* 5. Елементи акордеону */
+/* 7. Елементи акордеону */
 .accordion-header {
     background-color: #8D86C9;
     color: #FFFFFF;
@@ -231,7 +390,7 @@
     object-fit: contain;
 }
 
-/* 6. Картки новин */
+/* 8. Картки новин */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -315,7 +474,7 @@
     background-color: #7A72B8;
 }
 
-/* 7. Скидання стандартних стилів браузера */
+/* 9. Скидання стандартних стилів браузера */
 button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success):not(.btn-danger):not(.btn-secondary),
 .carousel-arrow {
     background-color: transparent;
@@ -345,7 +504,7 @@ button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_car
     box-shadow: none;
 }
 
-/* 8. Фіксація шрифтів */
+/* 10. Фіксація шрифтів */
 button, 
 .hero_card, 
 .accordion-header, 
@@ -382,7 +541,7 @@ figcaption,
     border-radius: 0;
 }
 
-/* 9. Меню правил */
+/* 11. Меню правил */
 .rules-tabs-nav button.tab-link {
     background-color: transparent;
     border: none;
@@ -405,7 +564,7 @@ figcaption,
     color: #8D86C9;
 }
 
-/* 10. Кремові блоки та FAQ */
+/* 12. Кремові блоки та FAQ */
 .info-card-beige,
 .about-content {
     background-color: #F5EBDF;
@@ -479,7 +638,7 @@ figcaption,
     background-color: #8D86C9;
 }
 
-/* 11. Статистика */
+/* 13. Статистика */
 .club-stats {
     display: flex;
     justify-content: space-between;
@@ -511,7 +670,7 @@ figcaption,
     color: #222222;
 }
 
-/* 12. Плашки FAQ */
+/* 14. Плашки FAQ */
 .faq-staggered-grid {
     display: flex;
     flex-direction: column;
@@ -552,25 +711,7 @@ figcaption,
     color: #222222;
 }
 
-/* Навігація та перемикач мов */
-.main-nav a,
-.main-nav span,
-.footer-nav a,
-.lang-switcher a,
-.lang-switcher span,
-.lang-item a,
-.lang-item span {
-    font-weight: bold !important;
-}
-
-.footer-nav a,
-.footer-nav a:hover,
-.footer-nav a:focus {
-    text-decoration: none !important;
-    font-weight: bold !important;
-}
-
-/* 13. Візуальне оформлення карток кортів (Компонент) */
+/* 15. Візуальне оформлення карток кортів */
 .court_types_section > div {
     position: relative;
     overflow: hidden;
@@ -603,12 +744,72 @@ figcaption,
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Повне прибрання підкреслень для карток послуг (hero_card) у всіх станах */
-.hero_card,
-.hero_card:hover,
-.hero_card:focus,
-.hero_card:active,
-.hero_card *,
-.hero_card *:hover {
+/* 16. Футер сайту */
+.main-footer {
+    background-color: #F5EBDF;
+    color: #242038;
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav a,
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #444444;
     text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold !important;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.7;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-socials img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 20px;
+    width: 100%;
 }
