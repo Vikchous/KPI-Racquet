@@ -5,21 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
   initRulesTabs();
 });
 
-/* Маніпуляція елементами
-   1) Знаходить елементи за класом (.service-card, .stat-item) і змінює їм стилі.
-   2) Додає новий елемент <p> із графіком роботи клубу у кінець <main>.
-*/
+/**
+ * Маніпуляція елементами:
+ * 1) Додаємо тінь на картки тренерів (.trainer-card) і бульбашки запитань у «Дитячому тенісі».
+ * 2) Розміщуємо заголовок «Поширені питання» по центру.
+ * 3) Додаємо новий елемент <p> із графіком роботи клубу у кінець <main>.
+ */
 function initElementsManipulation() {
-  // На index.html це картки послуг (.service-card), на about.html — статистичні картки (.stat-item)
-  const targetElements = document.querySelectorAll('.service-card, .stat-item');
-
-  targetElements.forEach((el) => {
-    el.style.backgroundColor = '#F5EBDF';
-    el.style.borderBottom = '4px solid #8D86C9';
-    el.style.transition = 'background-color 0.3s ease, border-color 0.3s ease';
+  const cardsWithShadow = document.querySelectorAll(
+    '.trainer-card, .faq-item, .faq-card, .faq-bubble, .question-card'
+  );
+  cardsWithShadow.forEach((card) => {
+    card.style.boxShadow = '0 8px 20px rgba(30, 30, 36, 0.12)';
+    card.style.transition = 'box-shadow 0.25s ease';
   });
 
-  // Додаємо <p> із графіком роботи клубу в кінець <main>
+  const headings = document.querySelectorAll('h1, h2, h3');
+  headings.forEach((heading) => {
+    if (heading.textContent.trim() === 'Поширені питання') {
+      heading.style.textAlign = 'center';
+    }
+  });
+
   const mainContainer = document.querySelector('main');
   const isAdminPage =
     window.location.pathname.includes('admin_login') ||
@@ -29,7 +36,7 @@ function initElementsManipulation() {
     const scheduleParagraph = document.createElement('p');
     scheduleParagraph.className = 'club-schedule-info';
     scheduleParagraph.textContent =
-      'Графік роботи клубу «Racquet»: щодня з 08:00 до 21:00 (без вихідних).';
+      'Графік роботи клубу «Racquet»: щодня з 07:00 до 22:00 (без вихідних).';
 
     scheduleParagraph.style.backgroundColor = '#F5EBDF';
     scheduleParagraph.style.color = '#1E1E24';
@@ -44,7 +51,9 @@ function initElementsManipulation() {
   }
 }
 
-/* Автоматичне виведення поточної дати у <footer> */
+/**
+ * Автоматичне виведення поточної дати у <footer>
+ */
 function initFooterDate() {
   const footer = document.querySelector('footer');
   if (!footer) return;
@@ -66,7 +75,9 @@ function initFooterDate() {
   footer.append(dateParagraph);
 }
 
-/* Кнопка «Показати більше» (акордеон) на about.html */
+/**
+ * Кнопка «Показати більше» (акордеон) на about.html
+ */
 function initAccordionMore() {
   const toggleBtn = document.getElementById('toggle-more-btn');
   const moreTextBlock = document.getElementById('club-more-text');
@@ -80,7 +91,9 @@ function initAccordionMore() {
   });
 }
 
-/* Перемикання вкладок у розділі «Правила» на about.html */
+/**
+ * Перемикання вкладок у розділі «Правила» на about.html
+ */
 function initRulesTabs() {
   const tabButtons = document.querySelectorAll('.rules-tabs-nav .tab-link');
   const tabPanels = document.querySelectorAll('.rules-panels .tab-panel');
