@@ -486,6 +486,25 @@
     background-color: #7A72B8;
 }
 
+/* Стиль для кнопки «Показати більше» */
+.btn-more {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background-color: #8D86C9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-more:hover {
+  opacity: 0.9;
+}
+
 /* 9. Скидання стандартних стилів браузера */
 button:not(.btn-news-more):not(.btn-primary-purple):not(.tab-link):not(.hero_card):not(.accordion-header):not(.btn-submit):not(.btn-next):not(.btn-back):not(.btn-success):not(.btn-danger):not(.btn-secondary),
 .carousel-arrow {
