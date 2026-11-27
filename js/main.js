@@ -36,7 +36,7 @@ function initElementsManipulation() {
     const scheduleParagraph = document.createElement('p');
     scheduleParagraph.className = 'club-schedule-info';
     scheduleParagraph.textContent =
-      'Графік роботи клубу «Racquet»: щодня з 07:00 до 22:00 (без вихідних).';
+      'Графік роботи клубу «Racquet»: щодня з 08:00 до 21:00 (без вихідних).';
 
     scheduleParagraph.style.backgroundColor = '#F5EBDF';
     scheduleParagraph.style.color = '#1E1E24';
@@ -76,13 +76,17 @@ function initFooterDate() {
 }
 
 /**
- * Кнопка «Показати більше» (акордеон) на about.html
+ * Кнопка «Показати більше» / «Приховати» (акордеон) на about.html
  */
 function initAccordionMore() {
   const toggleBtn = document.getElementById('toggle-more-btn');
   const moreTextBlock = document.getElementById('club-more-text');
 
   if (!toggleBtn || !moreTextBlock) return;
+
+  toggleBtn.style.display = 'block';
+  toggleBtn.style.width = 'fit-content';
+  toggleBtn.style.marginLeft = 'auto';
 
   toggleBtn.addEventListener('click', () => {
     const isHidden = moreTextBlock.classList.toggle('visually-hidden');
