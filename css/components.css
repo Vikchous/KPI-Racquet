@@ -499,12 +499,12 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .about-details .btn-more:hover {
   background-color: #8D86C9;
-  color: #FFFFFF;
+  color: #8D86C9;
 }
 
 /* 9. Скидання стандартних стилів браузера */
