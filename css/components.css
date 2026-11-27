@@ -597,22 +597,6 @@ figcaption,
     color: #8D86C9;
 }
 
-/*Налаштування розміру цифр пунктів*/
-.rules-panels,
-.rules-panels p,
-.rules-panels .rule-dash-list li {
-    font-family: 'Abel', sans-serif !important;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.rules-panels .rule-num {
-    font-family: 'Abel', sans-serif !important;
-    font-size: inherit;
-    font-weight: 700;
-    margin-right: 4px;
-}
-
 /* 12. Кремові блоки та FAQ */
 .info-card-beige,
 .about-content {
@@ -861,4 +845,20 @@ figcaption,
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 20px;
     width: 100%;
+}
+
+/*Налаштування розміру цифр пунктів */
+.rules-panels,
+.rules-panels p,
+.rules-panels .rule-dash-list li {
+    font-family: 'Abel', sans-serif !important;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.rules-panels .rule-num {
+    font-family: 'Abel', sans-serif !important;
+    font-size: inherit;
+    font-weight: 700;
+    margin-right: 4px;
 }
