@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initRulesTabs();
 });
 
-/
- * Завдання 2.1: Маніпуляція елементами
- * 1) Знаходить елементи за класом (.service-card, .stat-item) і змінює їм стилі.
- * 2) Додає новий елемент <p> із графіком роботи клубу у кінець <main>.
- */
+/* Маніпуляція елементами
+   1) Знаходить елементи за класом (.service-card, .stat-item) і змінює їм стилі.
+   2) Додає новий елемент <p> із графіком роботи клубу у кінець <main>.
+*/
 function initElementsManipulation() {
   // На index.html це картки послуг (.service-card), на about.html — статистичні картки (.stat-item)
   const targetElements = document.querySelectorAll('.service-card, .stat-item');
@@ -45,9 +44,7 @@ function initElementsManipulation() {
   }
 }
 
-/**
- * Завдання 2.2 (частина 1): Автоматичне виведення поточної дати у <footer>
- */
+/* Автоматичне виведення поточної дати у <footer> */
 function initFooterDate() {
   const footer = document.querySelector('footer');
   if (!footer) return;
@@ -69,9 +66,7 @@ function initFooterDate() {
   footer.append(dateParagraph);
 }
 
-/**
- * Завдання 2.2 (частина 2): Кнопка «Показати більше» (акордеон) на about.html
- */
+/* Кнопка «Показати більше» (акордеон) на about.html */
 function initAccordionMore() {
   const toggleBtn = document.getElementById('toggle-more-btn');
   const moreTextBlock = document.getElementById('club-more-text');
@@ -85,9 +80,7 @@ function initAccordionMore() {
   });
 }
 
-/**
- * Додатково за планом із ЛР3: Перемикання вкладок у розділі «Правила» на about.html
- */
+/* Перемикання вкладок у розділі «Правила» на about.html */
 function initRulesTabs() {
   const tabButtons = document.querySelectorAll('.rules-tabs-nav .tab-link');
   const tabPanels = document.querySelectorAll('.rules-panels .tab-panel');
