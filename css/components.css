@@ -490,21 +490,21 @@
 .about-details .btn-more {
   display: inline-block;
   margin-top: 16px;
-  padding: 12px 24px;
-  background-color: #8D86C9;
-  color: #FFFFFF;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #8D86C9;
   border: 2px solid #8D86C9;
   border-radius: 8px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .about-details .btn-more:hover {
-  background-color: #766FB5;
-  border-color: #766FB5;
+  background-color: #8D86C9;
+  color: #FFFFFF;
 }
 
 /* 9. Скидання стандартних стилів браузера */
