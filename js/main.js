@@ -29,7 +29,7 @@ function initElementsManipulation() {
     const scheduleParagraph = document.createElement('p');
     scheduleParagraph.className = 'club-schedule-info';
     scheduleParagraph.textContent =
-      'Графік роботи клубу «Racquet»: щодня з 07:00 до 22:00 (без вихідних).';
+      'Графік роботи клубу «Racquet»: щодня з 08:00 до 21:00 (без вихідних).';
 
     scheduleParagraph.style.backgroundColor = '#F5EBDF';
     scheduleParagraph.style.color = '#1E1E24';
