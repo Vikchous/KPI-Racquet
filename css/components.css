@@ -487,22 +487,24 @@
 }
 
 /* Стиль для кнопки «Показати більше» */
-.btn-more {
+.about-details .btn-more {
+  display: inline-block;
   margin-top: 16px;
   padding: 12px 24px;
   background-color: #8D86C9;
   color: #FFFFFF;
-  border: none;
+  border: 2px solid #8D86C9;
   border-radius: 8px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.btn-more:hover {
-  opacity: 0.9;
+.about-details .btn-more:hover {
+  background-color: #766FB5;
+  border-color: #766FB5;
 }
 
 /* 9. Скидання стандартних стилів браузера */
