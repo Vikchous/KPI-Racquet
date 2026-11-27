@@ -597,6 +597,15 @@ figcaption,
     color: #8D86C9;
 }
 
+/*Налаштування розміру цифр пунктів*/
+.rules-panels .rule-num {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+    margin-right: 4px;
+}
+
 /* 12. Кремові блоки та FAQ */
 .info-card-beige,
 .about-content {
